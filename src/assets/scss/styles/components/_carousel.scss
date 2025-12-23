@@ -1,0 +1,12 @@
+.carousel-indicators{
+  list-style-type: none;
+}
+
+[data-bs-theme=dark] .carousel, [data-bs-theme=dark].carousel {
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    filter: invert(0) grayscale(0);
+  }
+  .carousel-indicators [data-bs-target] {
+    background-color: $white;
+  }
+}

@@ -1,0 +1,92 @@
+//
+// flatpickr.scss
+//
+
+.flatpickr-calendar{
+    overflow: hidden;
+    background-color: $app-flatpicker-bg;
+    box-shadow: $box-shadow-sm;
+    .flatpickr-day {
+        color: $app-body-color;
+    }
+    .flatpickr-time{
+        border: none !important;
+        input, .flatpickr-am-pm{
+            color: $app-gray-600;
+            &:focus, &:hover{
+                background: $app-gray-300;
+            }
+        }
+    }
+    .flatpickr-weekdays{
+        background: $app-primary;
+        .flatpickr-weekday{
+            color: rgba($white, 0.8);
+        }
+    }
+    .today.inRange, .nextMonthDay.inRange, .nextMonthDay.endRange {
+        background-color: $app-light;
+    }
+}
+
+.dayContainer{
+    .today{
+        background-color: darken($primary, 5%);
+        color: $white;
+        border-color: darken($primary, 5%);
+    }
+    .startRange,.startRange:hover, .startRange:focus, .endRange, .endRange:hover,.endRange:focus, .selected, .selected:hover, .selected:focus{
+        background-color: $app-primary;
+        border-color: $app-primary;
+    }
+    .inRange{
+        background-color: $app-light;
+        border-color: $app-light;
+        box-shadow: -5px 0 0 $app-light, 5px 0 0 $app-light;
+    }
+    .flatpickr-day:hover{
+        background-color: $app-light;
+        border-color: $app-light;
+        color: $app-body-color;
+    }
+}
+
+
+.flatpickr-months {
+    .flatpickr-month {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .flatpickr-current-month{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .flatpickr-prev-month, .flatpickr-next-month{
+        fill: $app-body-color;
+        display: flex;
+        align-items: center;
+        height: 40px;
+    }
+    .flatpickr-monthDropdown-months, .numInputWrapper{
+        padding: 5px;
+    }
+    .numInputWrapper{
+        width: 70px;
+    }
+}
+
+.flatpickr-current-month{
+    color: $app-body-color;
+    font-size: 1rem;
+    padding: 8px 0 0 0;
+
+    .flatpickr-monthDropdown-months {
+        .flatpickr-monthDropdown-month{
+            color: $app-gray-700;
+        }
+    }
+}

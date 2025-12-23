@@ -1,0 +1,6 @@
+[data-bs-theme="dark"] {
+  .toast {
+    --#{$prefix}toast-header-bg: #{$app-gray-200};
+    --#{$prefix}toast-bg: #{$app-gray-300};
+  }
+}

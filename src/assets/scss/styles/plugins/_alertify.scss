@@ -1,0 +1,63 @@
+
+//
+// alertify.scss
+//
+
+
+.alertify {
+    .ajs-dialog{
+        box-shadow: $box-shadow;
+    }
+    .ajs-header{
+        font-size: 1.25rem;
+        font-weight: 600;
+        background-color: $app-gray-200;
+        color: $app-body-color;
+    }
+    .ajs-dialog {
+        background-color: $app-card-bg;
+    }
+    .ajs-body {
+        color: $app-body-color;
+    }
+    .ajs-footer {
+        background-color: $app-gray-200;
+        .ajs-buttons {
+            .ajs-button{
+                &.ajs-ok{
+                    color: $white;
+                    background: $app-primary;
+                    @include border(null, 1px, solid, $app-primary);
+                    border-radius: $border-radius;
+                }
+                &.ajs-cancel{
+                    color: $white;
+                    background: $app-secondary;
+                    @include border(null, 1px, solid, $app-secondary);
+                    border-radius: $border-radius;
+                }
+            }
+        }
+    }
+}
+
+.alertify-notifier {
+    .ajs-message{
+        background-color: $app-primary;
+        border-color: $app-primary;
+        color: $white;
+        text-shadow: none !important;
+        &.ajs-success{
+            background-color: $app-success;
+            border-color: $app-success;
+        }
+        &.ajs-error{
+            background-color: $app-danger;
+            border-color: $app-danger;
+        }
+        &.ajs-warning{
+            background-color: $app-warning;
+            border-color: $app-warning;
+        }
+    }
+}

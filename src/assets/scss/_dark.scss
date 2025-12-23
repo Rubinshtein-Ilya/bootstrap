@@ -1,0 +1,105 @@
+
+[data-bs-theme="dark"] {
+  .navbar-brand-box {
+      background: $app-topbar-bg;
+  }
+  .logo-dark {
+    display: none;
+  }
+  .logo-light {
+    display: inline-block;
+  }
+  .side-navbar {
+      --#{$prefix}menu-item-bg-hover: #{$app-card-bg};
+      background: #{$app-sidebar-bg};
+  }
+
+  .app-search {
+      span {
+          color: $app-gray-600;
+      }
+      .form-control {
+        background-color: rgba($app-topbar-search-bg-rgb, 0.4);
+      }
+      input.form-control::-webkit-input-placeholder {
+          color: $app-gray-600;
+      }
+  }
+
+  .page-title-box {
+      background-color: getVarName(body-bg);
+
+      h4 {
+          color: getVarName(dark);
+      }
+
+      .breadcrumb {
+          .breadcrumb-item.active {
+              color: $text-muted;
+          }
+      }
+
+      .input-date {
+          .form-control {
+              background-color: getVarName(light);
+              border-color: transparent;
+              color: white;
+          }
+      }
+  }
+
+  .side-navbar {
+      .menu-title {
+          color: $sidebar-dark-title-color;
+      }
+
+      .metismenu {
+          &>li>a {
+              color: $sidebar-dark-subitem-color !important;
+
+              &:hover,
+              &:focus,
+              &:active {
+                  color: $sidebar-dark-item-active-color !important;
+                  background-color: $sidebar-theme-dark-item-active-bg;
+              }
+          }
+
+          &>li.mm-active>a {
+              color: $sidebar-dark-item-active-color !important;
+              background-color: $sidebar-theme-dark-item-active-bg;
+          }
+      }
+  }
+
+  .nav-second-level,
+  .nav-thrid-level {
+      li {
+          a {
+              color: $sidebar-dark-subitem-color;
+
+              &:hover,
+              &.active,
+              &:focus {
+                  color: $sidebar-dark-item-active-color;
+              }
+          }
+      }
+  }
+
+  &.left-side-menu-condensed {
+      .side-navbar .metismenu {
+          & > li{
+              &:hover > a {
+                  color: $sidebar-dark-item-active-color !important;
+              }
+              & > ul {
+                  background-color: getVarName(gray-200);
+                  a:hover {
+                      color: $sidebar-dark-item-active-color;
+                  }
+              }
+          }
+      }
+  }
+}

@@ -1,0 +1,8 @@
+[data-bs-theme="dark"]{
+  .list-group {
+    @if $enable-dark-mode {
+      --#{$prefix}list-group-bg: #{$card-bg-dark};
+      --#{$prefix}list-group-border-color: #{$app-border-color};
+    }
+  }
+}

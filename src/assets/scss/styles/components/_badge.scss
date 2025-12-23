@@ -1,0 +1,53 @@
+// 
+// badge.scss
+//
+.badge-soft {
+    color: $app-gray-800;
+}
+
+// badge soft
+@mixin badge-soft-variant($bg) {
+    background-color: rgba($bg, 0.2);
+    color: $bg !important;
+}
+
+@each $color, $value in $theme-colors {
+    .badge-soft-#{$color} {
+      @include badge-soft-variant($value);
+    }
+}
+
+
+// Outline badge
+@mixin badge-variant-outline($key, $bg) {
+    color: var(--#{$prefix}#{$key});
+    border: 1px solid var(--#{$prefix}#{$key});
+    background-color: transparent;
+    box-shadow: none;
+
+    &[href] {
+        // @include hover-focus {
+        //     color: $bg;
+        //     text-decoration: none;
+        //     background-color: rgba($bg, 0.2);
+        // }
+    }
+}
+// Outline badge
+@each $color,
+$value in $theme-colors {
+    .badge-outline-#{$color} {
+        @include badge-variant-outline($color, $value);
+    }
+}
+
+[data-bs-theme="dark"] {
+    .badge-soft-primary {
+        background-color: rgba($app-primary-rgb, 0.1);
+        color: $app-primary !important;
+    }
+    .badge-soft-secondary {
+        background-color: rgba($app-secondary-rgb, 0.1);
+        color: $app-secondary !important;
+    }
+}

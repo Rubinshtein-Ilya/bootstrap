@@ -1,0 +1,1 @@
+(r=>{r('[data-plugin="dragula"]').each(function(){var a=r(this).data("containers"),s=[];if(a)for(var t=0;t<a.length;t++)s.push(r("#"+a[t])[0]);else s=[r(this)[0]];var n=r(this).data("handleclass");n?dragula(s,{moves:function(a,s,t){return t.classList.contains(n)}}):dragula(s)})})(jQuery);

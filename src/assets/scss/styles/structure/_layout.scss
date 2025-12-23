@@ -1,0 +1,125 @@
+:root,
+[data-bs-theme="light"] {
+  @each $color, $value in $app-colors {
+    --#{$prefix}#{$color}: #{$value};
+  }
+}
+
+[data-bs-theme="dark"] {
+  @if $enable-dark-mode {
+    @each $color, $value in $app-colors-dark {
+      --#{$prefix}#{$color}: #{$value};
+    }
+    @each $color, $value in $app-colors-dark-rgb {
+      --#{$prefix}#{$color}: #{$value};
+      --#{$prefix}#{$color}-rgb: #{to-rgb($value)};
+    }
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $app-gray-700;
+    font-family: $font-family-base;
+    font-weight: 600;
+}
+
+a {
+  color: $app-primary;
+  &:hover,
+  &:focus,
+  &.active {
+    text-decoration: none;
+    color: $app-primary-dark;
+  }
+  &.text-default {
+    color: $app-default;
+    &:hover,
+    &:focus,
+    &.focus,
+    &.active {
+      color: $app-primary !important;
+    }
+  }
+  &.text-dark {
+    color: $app-dark;
+    &:hover,
+    &:focus,
+    &.focus,
+    &.active {
+      color: $app-primary !important;
+    }
+  }
+}
+
+// Forms
+label {
+  font-weight: $font-weight-semibold;
+}
+
+b, strong{
+  font-weight: 700;
+}
+
+small {
+  font-size: px-rem-converter(12);
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+//Content Page
+.main-content {
+  margin-left: $sidebar-width;
+  padding: 0 12px;
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  min-height: calc(100vh - 121px);
+  .page-content {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+.page-title-box {
+  padding: 24px 12px 70px 12px;
+  margin: 0 -12px;
+  background: $app-primary;
+  color: $white;
+  // .breadcrumb {
+  //   display: none;
+  // }
+  h3 {
+    color: $white;
+  }
+  .date-icon{
+    color: $app-body-color;
+  }
+  .form-control {
+    border-color: $white;
+    &:focus {
+      border-color: $white;
+    }
+  }
+}
+
+hr {
+  border-color: rgba($black, 0.3);
+}

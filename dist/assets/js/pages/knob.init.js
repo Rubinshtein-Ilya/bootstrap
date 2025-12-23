@@ -1,0 +1,1 @@
+(i=>{i('[data-plugin="knob"]').each(function(n,a){i(this).knob()})})(jQuery);

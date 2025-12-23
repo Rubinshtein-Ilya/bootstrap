@@ -1,0 +1,50 @@
+.tooltip {
+  --#{$prefix}dark: #000;
+}
+.tooltip-inner{
+  
+  background-color: $app-dark;
+  box-shadow: $box-shadow;
+  color: $white;
+  font-weight: 600;
+}
+
+.bs-tooltip-top {
+  .arrow:before{
+    border-top-color: $app-dark;
+  }
+}
+
+.bs-tooltip-bottom {
+  .arrow:before{
+    border-bottom-color: $app-dark;
+  }
+}
+
+.bs-tooltip-left {
+  .arrow:before{
+    border-left-color: $app-dark;
+  }
+}
+
+.bs-tooltip-right {
+  .arrow:before{
+    border-right-color: $app-dark;
+  }
+}
+
+
+.bs-tooltip-auto {
+  &[x-placement^="top"] {
+    @extend .bs-tooltip-top;
+  }
+  &[x-placement^="right"] {
+    @extend .bs-tooltip-right;
+  }
+  &[x-placement^="bottom"] {
+    @extend .bs-tooltip-bottom;
+  }
+  &[x-placement^="left"] {
+    @extend .bs-tooltip-left;
+  }
+}

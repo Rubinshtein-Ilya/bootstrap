@@ -1,0 +1,92 @@
+// 
+// tables.scss
+//
+
+//Table centered (Custom)
+// .table>:not(caption)>*>* {
+//     border-bottom: $app-border-color;
+//     box-shadow: none;
+// }
+// .table-bordered>:not(caption)>*>* {
+//     border-color: $app-border-color;
+// }
+// .table-bordered>:not(caption)>* {
+//     border-color: $app-border-color;
+// }
+// .table-centered {
+//     td,th {
+//         vertical-align: middle !important;
+//     }
+// }
+[data-bs-theme="dark"]{
+    .table {
+        @if $enable-dark-mode {
+        --#{$prefix}table-color: #{$app-body-color};
+        }
+    }
+    .table-light {
+         --#{$prefix}table-color: #fff;
+         --#{$prefix}table-bg: #444;
+    }
+}
+.table>:not(caption)>*>* {
+    border-bottom: none;
+    box-shadow: none;
+}
+.table-bordered>:not(caption)>* {
+    border: none;
+}
+.table-bordered>:not(caption)>*>* {
+    border-color: $app-border-color;
+}
+.table {
+    th, td {
+        border-top: 1px solid $app-border-color;
+    }
+    thead {
+        th {
+            border-bottom: 2px solid $app-border-color;
+        }
+    }
+}
+
+.table-borderless {
+    th, td {
+        border: none;
+    }
+    thead {
+        th {
+            border-bottom: none;
+        }
+    }
+}
+
+.table-striped {
+    tbody tr:nth-of-type(odd) {
+        background-color: $app-light;
+    }
+}
+
+.table-bordered {
+    th, td {
+        border: 1px solid $app-border-color;
+    }
+}
+
+
+// Tables fluid
+.table-nowrap {
+    th, td {
+      white-space: nowrap;
+    }
+}
+
+//No thead
+.table-no-head{
+    td:first-child{
+        padding-left: 0;
+    }
+    td:last-child{
+        padding-right: 0;
+    }
+}

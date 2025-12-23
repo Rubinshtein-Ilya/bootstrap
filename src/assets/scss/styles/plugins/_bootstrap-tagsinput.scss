@@ -1,0 +1,21 @@
+.bootstrap-tagsinput {
+  height: calc(#{$input-line-height * 1em} + #{$input-btn-padding-x * 2} + #{$input-height-border} + 1);
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  background-color: $app-card-bg;
+  box-shadow: none;
+  border-color: $app-gray-400;
+  input {
+    padding: 6px 0;
+  }
+  &.focus {
+    border-color: $app-primary;
+  }
+  .tag{
+    background-color: rgba($app-primary-rgb, 0.3);
+    color: $app-primary;
+    border-radius: 3px;
+    padding: 0 7px;
+    font-weight: bold;
+  }
+}

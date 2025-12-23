@@ -1,0 +1,20 @@
+// 
+// backgrounds.scss
+//
+
+
+@each $color,
+$value in $theme-colors {
+    .bg-soft-#{$color} {
+        background-color: rgba($value, 0.2) !important;
+    }
+}
+
+[data-bs-theme="dark"] {
+    .bg-soft-primary {
+        background-color: rgba($app-primary-rgb, 0.1) !important;
+    }
+    .bg-soft-secondary {
+        background-color: rgba($app-secondary-rgb, 0.1) !important;
+    }
+}

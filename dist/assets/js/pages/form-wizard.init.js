@@ -1,0 +1,1 @@
+jQuery("#basicwizard").smartWizard();
