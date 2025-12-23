@@ -47,7 +47,7 @@
 // Sidemenu
 .side-navbar {
   width: $sidebar-width;
-  background: $dark-sidebar;
+  background: $white;
   @include position(fixed, $header-height, null, 0, 0, 10);
   transition-duration: 0.2s;
   box-shadow: 1px 0.05rem 0.01rem rgba(75, 75, 90, 0.075);

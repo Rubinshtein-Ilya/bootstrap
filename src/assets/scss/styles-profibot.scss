@@ -1,3 +1,27 @@
 .logo-sm-profi img {
   width: 15px;
 }
+
+.side-navbar {
+  background: $azure-19;
+
+  & .side-nav-link.side-nav-link-profi {
+    color: $azure-71;
+
+    &:hover {
+      color: $azure-71;
+    }
+  }
+
+  & .side-nav-link.side-nav-link-profi.active {
+    color: $azure-71;
+  }
+}
+
+.topbar-header {
+  background: $white;
+}
+
+.navbar-header .hamburg-icon i {
+  color: $grey-42;
+}
