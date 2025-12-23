@@ -247,7 +247,7 @@
         <!-- content -->
         <div class="page-content">
           <!-- page header -->
-          <div class="page-title-box bg-blue-6511">
+          <div class="page-title-box p-4 bg-blue-6511">
             <div class="container-fluid">
               <div class="d-flex align-items-end justify-content-between">
                 <div class="d-flex flex-column gap-4">
@@ -255,49 +255,158 @@
                     <h3 class="mb-1 fw-bold">Управление товарами</h3>
                   </div>
                   <div class="d-flex flex-row gap-3">
-                    <div class="input-group mb-3">
-                      <div class="search-icon-profi">
-                        <img src="/assets/images/profibot/search.svg" alt="search icon" />
-                      </div>
-
+                    <div class="input-group position-relative search-profi">
+                      <span
+                        class="position-absolute top-50 translate-middle-y start-0 ms-3 d-flex align-items-center"
+                        style="pointer-events: none; z-index: 10"
+                      >
+                        <img src="/assets/images/profibot/search.svg" alt="search icon" width="20" height="20" />
+                      </span>
                       <input
                         type="text"
-                        class="form-control py-2 rounded-start"
+                        class="form-control py-2 ps-5 rounded-start h-40"
                         placeholder="Артикул/Товар"
                         aria-label="Article/Product"
                         aria-describedby="button-addon2"
                       />
-                      <button class="btn bg-primary text-white" type="button" id="button-addon2">Поиск</button>
+                      <button class="btn bg-primary text-white h-40" type="button" id="button-addon2">Поиск</button>
                     </div>
-                    <button>BTN</button>
+                    <!-- filters -->
+                    <div class="btn-group dropend">
+                      <button
+                        type="button"
+                        class="btn bg-white text-secondary dropdown-toggle d-flex gap-1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Фильтр
+                        <img src="/assets/images/profibot/filter.svg" alt="filter icon" />
+                      </button>
+                      <ul class="dropdown-menu">
+                        <form class="d-flex flex-column gap-2 filter-form-profi">
+                          <li class="d-flex flex-column gap-2">
+                            <div class="dropdown-heading-profi">Выбор склада</div>
+                            <div>
+                              <input
+                                type="text"
+                                class="form-control py-2 rounded border border-1 h-40"
+                                placeholder="Склад"
+                              />
+                            </div>
+                          </li>
+                          <li class="d-flex flex-column gap-2">
+                            <div class="dropdown-heading-profi">Наличие</div>
+                            <div class="d-flex gap-2">
+                              <input
+                                type="text"
+                                class="form-control py-2 rounded border border-1 h-40"
+                                placeholder="До"
+                              />
+                              <input
+                                type="text"
+                                class="form-control py-2 rounded border border-1 h-40"
+                                placeholder="От"
+                              />
+                            </div>
+                          </li>
+                          <li class="d-flex justify-content-between align-items-center">
+                            <div class="dropdown-heading-profi">Предзаказ</div>
+                            <div>
+                              <input type="radio" class="btn-check" name="options" id="yes" autocomplete="off" />
+                              <label class="btn radio-btn-profi h-40" for="yes">Да</label>
+                              <input type="radio" class="btn-check" name="options" id="no" autocomplete="off" />
+                              <label class="btn radio-btn-profi h-40" for="no">Нет</label>
+                            </div>
+                          </li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </form>
+                      </ul>
+                    </div>
                   </div>
                 </div>
 
-                <div class="col-sm-7 col-xl-6">
-                  <form class="d-flex justify-content-sm-end">
-                    <div class="d-inline-flex me-2 input-date input-date-sm">
-                      <input class="form-control" type="text" id="dashdaterange" placeholder="03-10-19 To 04-06-20" />
-                      <div class="date-icon">
-                        <i class="bx bx-calendar fs-sm"></i>
+                <div class="d-flex flex-column gap-4 align-items-end">
+                  <!-- kaspi btns -->
+                  <div class="d-flex gap-4">
+                    <div class="d-flex flex-column justify-content-center gap-2">
+                      <div>
+                        <button class="btn bg-primary text-white kaspi-btn-profi">Загрузить товары с Kaspi</button>
+                      </div>
+                      <div class="d-flex justify-content-center gap-1 text-blue-17 time-success-profi">
+                        <div>Последний раз успешно:</div>
+                        <div>15.12.2025 17:08</div>
                       </div>
                     </div>
-                    <div class="btn-group dropdown">
-                      <button type="button" data-bs-toggle="dropdown" class="btn btn-light dropdown-toggle">
-                        <i class="bx bx-download me-1"></i> Download <i class="bx bx-chevron-down"></i>
+                    <div class="d-flex flex-column justify-content-center gap-2">
+                      <div>
+                        <button class="btn bg-primary text-white kaspi-btn-profi">Загрузить прайс в Kaspi</button>
+                      </div>
+                      <div class="d-flex justify-content-center gap-1 text-blue-17 time-success-profi">
+                        <div>Последний раз успешно:</div>
+                        <div>15.12.2025 17:08</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- dropdowns  -->
+                  <div class="d-flex justify-content-end gap-3">
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn bg-white text-secondary dropdown-toggle d-flex"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        3 месяца
+                        <img src="/assets/images/profibot/arrow-down.svg" alt="filter icon" />
                       </button>
-                      <div class="dropdown-menu-right dropdown-menu">
-                        <a href="javascript: void(0);" class="dropdown-item">
-                          <i class="bx bx-mail-send me-1"></i> Email
-                        </a>
-                        <a href="javascript: void(0);" class="dropdown-item">
-                          <i class="bx bx-printer me-1"></i> Print
-                        </a>
-                        <a href="javascript: void(0);" class="dropdown-item">
-                          <i class="bx bx-file me-1"></i> Re-Generate
-                        </a>
-                      </div>
+                      <ul class="dropdown-menu dropdown-menu-start dropdown-menu-profi">
+                        <!-- Dropdown menu links -->
+                        <li><button class="dropdown-item" type="button">3 месяца</button></li>
+                        <li><button class="dropdown-item" type="button">6 месяцев</button></li>
+                        <li><button class="dropdown-item" type="button">12 месяцев</button></li>
+                        <li><button class="dropdown-item" type="button">24 месяца</button></li>
+                      </ul>
                     </div>
-                  </form>
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn bg-white text-secondary dropdown-toggle d-flex"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Выбор магазина
+                        <img src="/assets/images/profibot/arrow-down.svg" alt="filter icon" />
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-start dropdown-menu-profi">
+                        <!-- Dropdown menu links -->
+                        <li><button class="dropdown-item" type="button">TestShop</button></li>
+                        <li><button class="dropdown-item" type="button">TestShop</button></li>
+                        <li><button class="dropdown-item" type="button">Магазин</button></li>
+                        <li><button class="dropdown-item" type="button">Магазин название</button></li>
+                      </ul>
+                    </div>
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn bg-white text-secondary dropdown-toggle d-flex"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Скачать и загрузить
+                        <img src="/assets/images/profibot/arrow-down.svg" alt="filter icon" />
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-start dropdown-menu-profi">
+                        <!-- Dropdown menu links -->
+                        <li><button class="dropdown-item" type="button">Скачать товары в Excel</button></li>
+                        <li><button class="dropdown-item" type="button">Загрузить товары в Excel</button></li>
+                        <li><button class="dropdown-item" type="button">Скачать данные товаров в Excel</button></li>
+                        <li><button class="dropdown-item" type="button">Загрузить данные товаров в Excel</button></li>
+                        <li><button class="dropdown-item" type="button">Загрузить отчет по проадажам Kaspi</button></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

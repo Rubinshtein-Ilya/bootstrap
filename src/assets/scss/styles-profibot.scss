@@ -53,21 +53,81 @@
 }
 
 .search-icon-profi {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+}
+.search-profi {
+  width: 441px;
+  height: 40px;
 }
 
+.time-success-profi {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.kaspi-btn-profi {
+  width: 286px;
+}
+
+.dropdown-menu.dropdown-menu-profi.show {
+  top: calc(100% + 6px) !important;
+}
+
+.dropdown-menu.dropdown-menu-profi {
+  .dropdown-item {
+    padding: 6px 12px 6px 12px;
+  }
+  .dropdown-item:hover {
+    background: $blue-6511;
+    color: $primary;
+  }
+}
+.dropdown-heading-profi {
+  font-size: 14.4px;
+  font-weight: 700;
+  line-height: 21.6px;
+  color: $blue-17;
+}
+
+.filter-form-profi {
+  padding: 10px 12px;
+  width: 424px;
+}
+
+.btn.radio-btn-profi {
+  background: $gray-400;
+  color: $white;
+
+  &:hover {
+    background: $gray-400;
+    color: $white;
+  }
+}
+
+.btn-check:checked + .btn {
+  border: none;
+  background: $primary;
+  color: $white;
+}
+
+.h-40 {
+  height: 40px;
+}
 .bg-blue-6511 {
   background: $blue-6511;
 }
 .bg-blue-65 {
-  background: $blue-65;
+  background: $primary;
 }
 .bg-azure-19 {
   background: $azure-19;
 }
 .bg-pringgreen-55 {
   background: $springgreen-55;
+}
+.bg-grey-400 {
+  background: $gray-400;
 }
 .text-azure-71 {
   color: $azure-71;
