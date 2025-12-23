@@ -36,7 +36,7 @@
   <div class="page-wrapper">
     <!-- Begin Header -->
     <!-- Begin Header -->
-    <header id="page-topbar" class="topbar-header">
+    <header id="page-topbar" class="topbar-header bg-white">
       <div class="navbar-header">
         <div class="left-bar">
           <div class="navbar-brand-box">
@@ -53,12 +53,15 @@
               <span class="logo-lg"><img src="assets/images/profibot/profibot.svg" alt="Lettstart Admin" /></span>
             </a>
           </div>
-          <button type="button" id="vertical-menu-btn" class="btn hamburg-icon">
-            <i class="mdi mdi-menu"></i>
+          <button type="button" id="vertical-menu-btn" class="btn hamburg-icon text-grey-42">
+            <i class="mdi mdi-menu "></i>
           </button>
         </div>
-
-     
+    <!-- right part -->
+         <div class="d-flex gap-2 align-items-center">
+          <!-- whatsApp btn -->
+    <button type="button" class="btn whatsApp-btn bg-pringgreen-55 text-white">Написать в WhatsApp</button>
+          <!-- notifications -->
           <div class="d-inline-flex ms-0 ms-sm-2 dropdown">
             <button
               data-bs-toggle="dropdown"
@@ -66,7 +69,7 @@
               type="button"
               id="page-header-notification-dropdown"
               aria-expanded="false"
-              class="btn header-item notify-icon position-relative"
+              class="btn header-item notify-icon position-relative text-grey-42"
             >
               <i class="bx bx-bell bx-tada"></i>
               <span class="badge bg-danger badge-pill notify-icon-badge bg-danger rounded-pill">3</span>
@@ -97,58 +100,6 @@
                         </p>
                       </div>
                     </a>
-                    <!-- <a href="javascript:void(0);" class="dropdown-item notification-item">
-                      <div class="media">
-                        <div class="avatar avatar-xs">
-                          <img
-                            alt="Lettstart Admin"
-                            class="img-fluid rounded-circle"
-                            src="assets/images/users/avatar-1.jpg"
-                          />
-                        </div>
-                        <p class="media-body">
-                          John likes your photo
-                          <small class="text-muted">5 hours ago</small>
-                        </p>
-                      </div> </a
-                    > -->
-                    <!-- <a href="javascript:void(0);" class="dropdown-item notification-item">
-                      <div class="media">
-                        <div class="avatar avatar-xs">
-                          <img
-                            alt="Lettstart Admin"
-                            class="img-fluid rounded-circle"
-                            src="assets/images/users/avatar-2.jpg"
-                          />
-                        </div>
-                        <p class="media-body">
-                          Johnson
-                          <small class="text-muted">Wow! admin looks good</small>
-                        </p>
-                      </div> </a
-                    > -->
-                    <!-- <a href="javascript:void(0);" class="dropdown-item notification-item">
-                      <div class="media">
-                        <div class="avatar avatar-xs bg-danger">
-                          <i class="bx bx-server"></i>
-                        </div>
-                        <p class="media-body">
-                          Server getting down
-                          <small class="text-muted">1 min ago</small>
-                        </p>
-                      </div> </a
-                    > -->
-                    <!-- <a href="javascript:void(0);" class="dropdown-item notification-item">
-                      <div class="media">
-                        <div class="avatar avatar-xs bg-info">
-                          <i class="bx bx-tag"></i>
-                        </div>
-                        <p class="media-body">
-                          Someone tag you
-                          <small class="text-muted">2 hours ago</small>
-                        </p>
-                      </div>
-                    </a> -->
                   </div>
                 </div>
                 <div class="notify-all">
@@ -160,16 +111,16 @@
             </div>
           </div>
           <!-- profile btn -->
-          <div class="d-inline-flex ms-0 ms-sm-2 dropdown">
+          <div class="d-inline-flex  dropdown">
             <button
               data-bs-toggle="dropdown"
               aria-haspopup="true"
               type="button"
               id="page-header-profile-dropdown"
               aria-expanded="false"
-              class="btn header-item"
+              class="btn header-item text-grey-42"
             >
-              <img src="assets/images/users/avatar-1.jpg" alt="Header Avatar" class="avatar avatar-xs me-0" />
+              <img src="assets/images/profibot/header-logo.svg" alt="Header Avatar" class="avatar avatar-xs me-0" />
        
               <i class="bx bx-chevron-down d-none d-xl-inline-block"></i>
             </button>
@@ -184,7 +135,7 @@
               </a>
             </div>
           </div>
-   
+       </div>
         </div>
       </div>
     </header>
@@ -193,95 +144,95 @@
     <!-- Header End -->
     <!-- Begin Left Navigation -->
     <!-- Begin Left Navigation -->
-    <aside class="side-navbar">
+    <aside class="side-navbar bg-azure-19">
       <div class="scroll-content" id="metismenu">
         <ul id="side-menu" class="metismenu list-unstyled">
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/1">
+            <a class="side-nav-link text-azure-71" href="/1">
               <i class="bx bx-calendar"></i>
               <span>Обзор</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/2">
+            <a class="side-nav-link text-azure-71" href="/2">
               <i class="bx bx-calendar"></i>
               <span>Заказы</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/3">
+            <a class="side-nav-link text-azure-71" href="/3">
               <i class="bx bx-calendar"></i>
               <span>Анализ продаж</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/4">
+            <a class="side-nav-link text-azure-71" href="/4">
               <i class="bx bx-calendar"></i>
               <span>Убыточные товары</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/product-managment-page.html">
+            <a class="side-nav-link text-azure-71" href="/product-managment-page.html">
               <i class="bx bx-calendar"></i>
               <span>Управление товарами</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/5">
+            <a class="side-nav-link text-azure-71" href="/5">
               <i class="bx bx-calendar"></i>
               <span>Товары на складах</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/6">
+            <a class="side-nav-link text-azure-71" href="/6">
               <i class="bx bx-calendar"></i>
               <span>Движения по складам</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/7">
+            <a class="side-nav-link text-azure-71" href="/7">
               <i class="bx bx-calendar"></i>
               <span>Предзаказ</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/8">
+            <a class="side-nav-link text-azure-71" href="/8">
               <i class="bx bx-calendar"></i>
               <span>Мин. остатки</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/9">
+            <a class="side-nav-link text-azure-71" href="/9">
               <i class="bx bx-calendar"></i>
               <span>Ваши клиенты</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/10">
+            <a class="side-nav-link text-azure-71" href="/10">
               <i class="bx bx-calendar"></i>
               <span>Уведомления</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/11">
+            <a class="side-nav-link text-azure-71" href="/11">
               <i class="bx bx-calendar"></i>
               <span>WhatsApp</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/12">
+            <a class="side-nav-link text-azure-71" href="/12">
               <i class="bx bx-calendar"></i>
               <span>Чаты (beta)</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/13">
+            <a class="side-nav-link text-azure-71" href="/13">
               <i class="bx bx-calendar"></i>
               <span>Ваш профиль</span>
             </a>
           </li>
           <li>
-            <a class="side-nav-link side-nav-link-profi" href="/14">
+            <a class="side-nav-link text-azure-71" href="/14">
               <i class="bx bx-calendar"></i>
               <span>Инструкция</span>
             </a>

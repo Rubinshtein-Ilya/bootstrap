@@ -3,9 +3,7 @@
 }
 
 .side-navbar {
-  background: $azure-19;
-
-  & .side-nav-link.side-nav-link-profi {
+  & .side-nav-link.text-azure-71 {
     color: $azure-71;
 
     &:hover {
@@ -13,15 +11,70 @@
     }
   }
 
-  & .side-nav-link.side-nav-link-profi.active {
+  & .side-nav-link.text-azure-71.active {
     color: $azure-71;
   }
 }
 
-.topbar-header {
-  background: $white;
+.navbar-header .hamburg-icon.text-grey-42 i {
+  color: $grey-42;
 }
 
-.navbar-header .hamburg-icon i {
+.header-item.btn {
+  padding: 7.67px;
+}
+
+.page-title.text-blue-17 > h3 {
+  color: $blue-17;
+}
+
+.header-item.active,
+.header-item.btn:first-child:active,
+.header-item.show,
+.header-item:active,
+.header-item:focus,
+.header-item:hover {
+  background: transparent;
   color: $grey-42;
+}
+
+.whatsApp-btn {
+  transition: all 0.3s ease-in-out;
+  padding: 6.87px 11.67px 6.87px 11.67px;
+  border-radius: 50px;
+
+  @media (width > 1024px) {
+    &:hover {
+      background: $springgreen-55;
+      color: #fff;
+      opacity: 0.6;
+    }
+  }
+}
+
+.search-icon-profi {
+  width: 20px;
+  height: 20px;
+}
+
+.bg-blue-6511 {
+  background: $blue-6511;
+}
+.bg-blue-65 {
+  background: $blue-65;
+}
+.bg-azure-19 {
+  background: $azure-19;
+}
+.bg-pringgreen-55 {
+  background: $springgreen-55;
+}
+.text-azure-71 {
+  color: $azure-71;
+}
+.text-grey-42 {
+  color: $grey-42;
+}
+.text-blue-17 {
+  color: $blue-17;
 }

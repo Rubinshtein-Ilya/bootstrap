@@ -22,17 +22,32 @@
         <!-- content -->
         <div class="page-content">
           <!-- page header -->
-          <div class="page-title-box">
+          <div class="page-title-box bg-blue-6511">
             <div class="container-fluid">
-              <div class="row align-items-center">
-                <div class="col-sm-5 col-xl-6">
-                  <div class="page-title">
-                    <h3 class="mb-1 fw-bold">MultiPurpose</h3>
-                    <ol class="breadcrumb mb-3 mb-md-0">
-                      <li class="breadcrumb-item active">Welcome to Admin Dashboard</li>
-                    </ol>
+              <div class="d-flex align-items-end justify-content-between">
+                <div class="d-flex flex-column gap-4">
+                  <div class="page-title text-blue-17">
+                    <h3 class="mb-1 fw-bold">Управление товарами</h3>
+                  </div>
+                  <div class="d-flex flex-row gap-3">
+                    <div class="input-group mb-3">
+                      <div class="search-icon-profi">
+                        <img src="/assets/images/profibot/search.svg" alt="search icon" />
+                      </div>
+
+                      <input
+                        type="text"
+                        class="form-control py-2 rounded-start"
+                        placeholder="Артикул/Товар"
+                        aria-label="Article/Product"
+                        aria-describedby="button-addon2"
+                      />
+                      <button class="btn bg-primary text-white" type="button" id="button-addon2">Поиск</button>
+                    </div>
+                    <button>BTN</button>
                   </div>
                 </div>
+
                 <div class="col-sm-7 col-xl-6">
                   <form class="d-flex justify-content-sm-end">
                     <div class="d-inline-flex me-2 input-date input-date-sm">
@@ -206,8 +221,6 @@
         </div>
       </div>
       <!-- main content End -->
-      <!-- footer -->
-      @@include('partials/footer.html')
     </div>
     <!-- Page End -->
     <!-- ================== BEGIN BASE JS ================== -->
