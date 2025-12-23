@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/title.html", {"title": "Multipurpose Vertical Layout"})
+    <!-- ================== Plugins CSS  ================== -->
+    <link rel="stylesheet" href="assets/libs/flatpicker/css/flatpickr.min.css" />
+    <!-- ================== Plugins CSS ================== -->
+    @@include("partials/head.html")
+  </head>
+
+  <body>
+    <!-- Begin Page -->
+    <div class="page-wrapper">
+      <!-- Begin Header -->
+      @@include('partials/topbar.html')
+      <!-- Header End -->
+      <!-- Begin Left Navigation -->
+      @@include('partials/left-sidebar.html')
+      <!-- Left Navigation End -->
+      <!-- Begin main content -->
+      <div class="main-content">
+        <!-- content -->
+        <div class="page-content">
+          <!-- page header -->
+          <div class="page-title-box">
+            <div class="container-fluid">
+              <div class="row align-items-center">
+                <div class="col-sm-5 col-xl-6">
+                  <div class="page-title">
+                    <h3 class="mb-1 fw-bold">MultiPurpose</h3>
+                    <ol class="breadcrumb mb-3 mb-md-0">
+                      <li class="breadcrumb-item active">Welcome to Admin Dashboard</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="col-sm-7 col-xl-6">
+                  <form class="d-flex justify-content-sm-end">
+                    <div class="d-inline-flex me-2 input-date input-date-sm">
+                      <input class="form-control" type="text" id="dashdaterange" placeholder="03-10-19 To 04-06-20" />
+                      <div class="date-icon">
+                        <i class="bx bx-calendar fs-sm"></i>
+                      </div>
+                    </div>
+                    <div class="btn-group dropdown">
+                      <button type="button" data-bs-toggle="dropdown" class="btn btn-light dropdown-toggle">
+                        <i class="bx bx-download me-1"></i> Download <i class="bx bx-chevron-down"></i>
+                      </button>
+                      <div class="dropdown-menu-right dropdown-menu">
+                        <a href="javascript: void(0);" class="dropdown-item">
+                          <i class="bx bx-mail-send me-1"></i> Email
+                        </a>
+                        <a href="javascript: void(0);" class="dropdown-item">
+                          <i class="bx bx-printer me-1"></i> Print
+                        </a>
+                        <a href="javascript: void(0);" class="dropdown-item">
+                          <i class="bx bx-file me-1"></i> Re-Generate
+                        </a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- page content -->
+          <div class="page-content-wrapper pt-3">
+            <div class="container-fluid">
+              <!-- Widget  -->
+
+              <!-- Row 5 -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="card-title">Inventory Stock</h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table table-nowrap">
+                          <thead>
+                            <tr>
+                              <th>Serial</th>
+                              <th>Code</th>
+                              <th>Date</th>
+                              <th>Stock</th>
+                              <th>Stock Left</th>
+                              <th>Status</th>
+                              <th>Ratings</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>#1</td>
+                              <td><strong>8765482</strong></td>
+                              <td>November 14, 2019</td>
+                              <td>15000</td>
+                              <td>10000</td>
+                              <td><span class="badge badge-soft-success">In Stock</span></td>
+                              <td>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star-half text-warning"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>#2</td>
+                              <td><strong>2366482</strong></td>
+                              <td>November 15, 2019</td>
+                              <td>15000</td>
+                              <td>100</td>
+                              <td><span class="badge badge-soft-danger">Out Stock</span></td>
+                              <td>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star-half text-warning"></i></a>
+                                <a href="#"><i class="bx bx-star text-warning"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>#3</td>
+                              <td><strong>3557477</strong></td>
+                              <td>November 16, 2019</td>
+                              <td>15000</td>
+                              <td>7000</td>
+                              <td><span class="badge badge-soft-success">In Stock</span></td>
+                              <td>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>#4</td>
+                              <td><strong>8747754</strong></td>
+                              <td>November 17, 2019</td>
+                              <td>15000</td>
+                              <td>8000</td>
+                              <td><span class="badge badge-soft-success">In Stock</span></td>
+                              <td>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star-half text-warning"></i></a>
+                                <a href="#"><i class="bx bx-star text-warning"></i></a>
+                                <a href="#"><i class="bx bx-star text-warning"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>#5</td>
+                              <td><strong>9874745</strong></td>
+                              <td>November 18, 2019</td>
+                              <td>15000</td>
+                              <td>50</td>
+                              <td><span class="badge badge-soft-danger">Out Stock</span></td>
+                              <td>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star text-warning"></i></a>
+                                <a href="#"><i class="bx bxs-star-half text-warning"></i></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="my-3 d-flex justify-content-end">
+                        <ul class="pagination flat-rounded-pagination">
+                          <li class="page-item disabled">
+                            <a
+                              href="javascript:void(0)"
+                              class="page-link"
+                              data-effect="wave"
+                              aria-label="Previous"
+                              tabindex="-1"
+                              aria-disabled="true"
+                            >
+                              <i class="bx bx-chevron-left"></i>
+                            </a>
+                          </li>
+                          <li class="page-item active" aria-current="page">
+                            <a href="javascript:void(0)" class="page-link" data-effect="wave">1</a>
+                          </li>
+                          <li class="page-item" aria-current="page">
+                            <a href="javascript:void(0)" class="page-link" data-effect="wave">2</a>
+                          </li>
+                          <li class="page-item" aria-current="page">
+                            <a href="javascript:void(0)" class="page-link" data-effect="wave">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a href="javascript:void(0)" class="page-link" data-effect="wave" aria-label="Next">
+                              <i class="bx bx-chevron-right"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+      <!-- footer -->
+      @@include('partials/footer.html')
+    </div>
+    <!-- Page End -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="assets/js/vendor.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- ================== END BASE JS ================== -->
+
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="assets/libs/flatpicker/js/flatpickr.js"></script>
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/libs/chartjs/js/Chart.bundle.min.js"></script>
+    <script src="assets/js/utils/colors.js"></script>
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+    <!-- ================== BEGIN PAGE JS ================== -->
+    <script src="assets/js/app.js"></script>
+    <!-- ================== END PAGE JS ================== -->
+  </body>
+</html>
