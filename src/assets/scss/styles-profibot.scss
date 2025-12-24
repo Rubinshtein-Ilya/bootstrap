@@ -59,6 +59,10 @@
 .search-profi {
   width: 441px;
   height: 40px;
+
+  @media (width < 1510px) {
+    width: 100%;
+  }
 }
 
 .time-success-profi {
@@ -68,6 +72,9 @@
 
 .kaspi-btn-profi {
   width: 286px;
+  @media (width < 1510px) {
+    width: 100%;
+  }
 }
 
 .dropdown-menu.dropdown-menu-profi.show {

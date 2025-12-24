@@ -7045,6 +7045,11 @@ table[data-app-toggle=table] {
   width: 441px;
   height: 40px;
 }
+@media (width < 1510px) {
+  .search-profi {
+    width: 100%;
+  }
+}
 
 .time-success-profi {
   font-size: 13px;
@@ -7053,6 +7058,11 @@ table[data-app-toggle=table] {
 
 .kaspi-btn-profi {
   width: 286px;
+}
+@media (width < 1510px) {
+  .kaspi-btn-profi {
+    width: 100%;
+  }
 }
 
 .dropdown-menu.dropdown-menu-profi.show {
