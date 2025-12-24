@@ -23,12 +23,21 @@ $(document).ready(function () {
     $("body").addClass("no-scroll");
   });
 
+  // Открытие модального окна при клике на кнопку "Снять с продажи"
+  $("#remove-from-sale").click(function () {
+    $(".product-management-grey-btn").removeClass("products-active-btn");
+    $(this).addClass("products-active-btn");
+    $("#remove-from-sale-modal-box").addClass("modal-active-profi");
+    $("body").addClass("no-scroll");
+  });
+
   // Закрытие модального окна при клике на оверлей (используем делегирование)
   $(document).on("click", ".modal-overlay", function () {
     $(".product-management-grey-btn").removeClass("products-active-btn");
     $("#dumping-modal-box").removeClass("modal-active-profi");
     $("#preorder-modal-box").removeClass("modal-active-profi");
     $("#balances-modal-box").removeClass("modal-active-profi");
+    $("#remove-from-sale-modal-box").removeClass("modal-active-profi");
     $("body").removeClass("no-scroll");
   });
 
@@ -38,6 +47,7 @@ $(document).ready(function () {
     $("#dumping-modal-box").removeClass("modal-active-profi");
     $("#preorder-modal-box").removeClass("modal-active-profi");
     $("#balances-modal-box").removeClass("modal-active-profi");
+    $("#remove-from-sale-modal-box").removeClass("modal-active-profi");
     $("body").removeClass("no-scroll");
   });
 });

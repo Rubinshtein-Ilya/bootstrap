@@ -7414,12 +7414,14 @@ table[data-app-toggle=table] {
 
 #dumping-modal-box,
 #preorder-modal-box,
-#balances-modal-box {
+#balances-modal-box,
+#remove-from-sale-modal-box {
   display: none;
 }
 #dumping-modal-box.modal-active-profi,
 #preorder-modal-box.modal-active-profi,
-#balances-modal-box.modal-active-profi {
+#balances-modal-box.modal-active-profi,
+#remove-from-sale-modal-box.modal-active-profi {
   display: block;
 }
 
