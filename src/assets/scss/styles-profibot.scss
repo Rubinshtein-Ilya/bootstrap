@@ -223,7 +223,7 @@
   display: flex;
   width: fit-content;
   overflow: hidden;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px;
   box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.03);
   background: rgba(255, 255, 255, 1);
   @media (width < 576px) {
@@ -241,12 +241,10 @@
 }
 
 .table-paggination {
-  min-width: 100%;
-  width: fit-content;
-  background: rgba(255, 255, 255, 1);
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.03);
-  //   overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-block: 24px;
+  gap: 48px;
 }
 
 .table thead th {
@@ -333,6 +331,22 @@
   color: $secondary;
   border: none;
   background: transparent;
+}
+
+.mobile-pagination {
+  padding: 16px 16px 16px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.pagination-mobile-btn {
+  padding: 4px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
 }
 
 .form-check-input-profi {

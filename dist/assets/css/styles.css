@@ -7219,7 +7219,7 @@ table[data-app-toggle=table] {
   width: -moz-fit-content;
   width: fit-content;
   overflow: hidden;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px;
   box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.03);
   background: rgb(255, 255, 255);
 }
@@ -7239,12 +7239,10 @@ table[data-app-toggle=table] {
 }
 
 .table-paggination {
-  min-width: 100%;
-  width: -moz-fit-content;
-  width: fit-content;
-  background: rgb(255, 255, 255);
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  padding-block: 24px;
+  gap: 48px;
 }
 
 .table thead th {
@@ -7328,6 +7326,22 @@ table[data-app-toggle=table] {
   color: #4b4b5a;
   border: none;
   background: transparent;
+}
+
+.mobile-pagination {
+  padding: 16px 16px 16px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.pagination-mobile-btn {
+  padding: 4px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
 }
 
 .form-check-input-profi {
