@@ -56,4 +56,9 @@ $(document).ready(function () {
     $(".product-btn-profi").removeClass("active-filter");
     $(this).addClass("active-filter");
   });
+
+  // Отключение/включение всех чекбоксов (кроме тех, что внутри form-switch)
+  $("#mainCheckbox").click(function () {
+    $(".form-check-input").not(".form-switch .form-check-input").prop("checked", this.checked);
+  });
 });
