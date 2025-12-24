@@ -223,13 +223,30 @@
   display: flex;
   width: fit-content;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.03);
   background: rgba(255, 255, 255, 1);
   @media (width < 576px) {
     width: 100%;
     border: 1px solid rgba(231, 231, 231, 1);
   }
+}
+
+.table-paggination-wrapper {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.table-paggination {
+  min-width: 100%;
+  width: fit-content;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.03);
+  //   overflow: hidden;
 }
 
 .table thead th {
@@ -255,8 +272,78 @@
   min-height: 100% !important;
 }
 
+.table-input-profi {
+  width: 150px;
+  border: none;
+
+  &:focus {
+    border: 1px solid $primary;
+  }
+}
+
+.badge-profi {
+  padding: 5px 16px 5px 16px;
+  border-radius: 130px;
+}
+
+.badge-profi-mobile {
+  padding: 5px 8px 5px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.badge-profi-success {
+  background: #b2ffb4;
+  color: #04910c;
+}
+
+.badge-profi-warning {
+  background: #fdeded;
+  color: #e84646;
+}
+
+.badge-profi-preorder {
+  background: #fff4e6;
+  color: #ff9500;
+}
+
+.badge-btn-profi {
+  width: 30px;
+  height: 30px;
+  background: #f0f6ff;
+  color: #007abd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  letter-spacing: 2px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+
+  &.badge-btn-profi-dark {
+    background: #007abd;
+    color: #f0f6ff;
+  }
+}
+
+.td-profi-text {
+  font-style: 16px;
+  font-weight: 400;
+  color: $secondary;
+  border: none;
+  background: transparent;
+}
+
+.form-check-input-profi {
+  width: 36px;
+  height: 22px;
+}
 .w-fit {
   width: fit-content;
+}
+.h-fit {
+  height: fit-content;
 }
 .gap-12 {
   gap: 12px;
