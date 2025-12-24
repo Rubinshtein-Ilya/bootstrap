@@ -7065,6 +7065,12 @@ table[data-app-toggle=table] {
   }
 }
 
+@media (width < 576px) {
+  .fs-14-profi {
+    font-size: 14px;
+  }
+}
+
 .dropdown-menu.dropdown-menu-profi.show {
   top: calc(100% + 6px) !important;
 }
@@ -7075,6 +7081,11 @@ table[data-app-toggle=table] {
 .dropdown-menu.dropdown-menu-profi .dropdown-item:hover {
   background: rgba(120, 89, 244, 0.11);
   color: #7859f4;
+}
+@media (width < 576px) {
+  .dropdown-menu.dropdown-menu-profi {
+    width: 100%;
+  }
 }
 
 .dropdown-heading-profi {
@@ -7087,6 +7098,21 @@ table[data-app-toggle=table] {
 .filter-form-profi {
   padding: 10px 12px;
   width: 424px;
+}
+@media (width < 576px) {
+  .filter-form-profi {
+    width: 99dvw;
+  }
+}
+
+@media (width < 576px) {
+  .btn-group.dropend-sm .dropdown-menu {
+    top: calc(100% + 6px) !important;
+    right: -13px !important;
+    left: auto !important;
+    transform: none !important;
+    margin-top: 0;
+  }
 }
 
 .btn.radio-btn-profi {
@@ -7104,12 +7130,91 @@ table[data-app-toggle=table] {
   color: #fff;
 }
 
+.w-mobile-100 {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .w-mobile-100 {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+.m-profi-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (width > 767px) {
+  .m-profi-0 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+.product-btn-profi {
+  width: 179.5px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(33, 37, 41, 0.75);
+}
+@media (width < 576px) {
+  .product-btn-profi {
+    width: 87.5px;
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}
+
+.product-management-box {
+  padding-block: 24px;
+  padding-inline: 0;
+}
+@media (width < 576px) {
+  .product-management-box {
+    padding-block: 20px;
+  }
+}
+
+.product-management-wrapper {
+  padding-inline: 12px;
+}
+@media (width < 576px) {
+  .product-management-wrapper {
+    padding-block: 16px;
+    background: #fff;
+    border-radius: 12px;
+  }
+}
+
+@media (width < 576px) {
+  .product-management-grey-btn {
+    width: 195px;
+    font-size: 14px;
+    padding-inline: 0;
+  }
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .gap-12 {
   gap: 12px;
 }
 
 .h-40 {
   height: 40px;
+}
+
+.px-12 {
+  padding-inline: 12px;
 }
 
 .bg-blue-6511 {

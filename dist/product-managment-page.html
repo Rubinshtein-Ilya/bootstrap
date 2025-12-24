@@ -247,7 +247,7 @@
         <!-- content -->
         <div class="page-content">
           <!-- page header -->
-          <div class="page-title-box p-3 p-lg-4 bg-blue-6511">
+          <div class="page-title-box m-profi-0 p-3 p-lg-4 bg-blue-6511">
             <div class="container-fluid p-0">
               <div class="d-flex flex-column flex-xxl-row justify-content-between flex-wrap gap-12 gap-lg-4">
                 <div class="d-flex flex-column gap-12 gap-lg-4">
@@ -264,18 +264,18 @@
                       </span>
                       <input
                         type="text"
-                        class="form-control py-2 ps-5 rounded-start h-40"
+                        class="form-control py-2 ps-5 rounded-start h-40 fs-14-profi"
                         placeholder="Артикул/Товар"
                         aria-label="Article/Product"
                         aria-describedby="button-addon2"
                       />
-                      <button class="btn bg-primary text-white h-40" type="button" id="button-addon2">Поиск</button>
+                      <button class="btn bg-primary text-white h-40 fs-14-profi" type="button" id="button-addon2">Поиск</button>
                     </div>
                     <!-- filters -->
-                    <div class="btn-group dropend">
+                    <div class="btn-group dropend dropend-sm">
                       <button
                         type="button"
-                        class="btn bg-white text-secondary dropdown-toggle d-flex gap-1"
+                        class="btn bg-white text-secondary dropdown-toggle d-flex gap-1 fs-14-profi"
                         data-bs-toggle="dropdown"
                         data-bs-auto-close="outside"
                         aria-expanded="false"
@@ -288,26 +288,14 @@
                           <li class="d-flex flex-column gap-2">
                             <div class="dropdown-heading-profi">Выбор склада</div>
                             <div>
-                              <input
-                                type="text"
-                                class="form-control py-2 rounded border border-1 h-40"
-                                placeholder="Склад"
-                              />
+                              <input type="text" class="form-control py-2 rounded border border-1 h-40" placeholder="Склад" />
                             </div>
                           </li>
                           <li class="d-flex flex-column gap-2">
                             <div class="dropdown-heading-profi">Наличие</div>
                             <div class="d-flex gap-2">
-                              <input
-                                type="text"
-                                class="form-control py-2 rounded border border-1 h-40"
-                                placeholder="До"
-                              />
-                              <input
-                                type="text"
-                                class="form-control py-2 rounded border border-1 h-40"
-                                placeholder="От"
-                              />
+                              <input type="text" class="form-control py-2 rounded border border-1 h-40" placeholder="До" />
+                              <input type="text" class="form-control py-2 rounded border border-1 h-40" placeholder="От" />
                             </div>
                           </li>
                           <li class="d-flex justify-content-between align-items-center">
@@ -349,7 +337,7 @@
                   <div class="d-flex gap-2 gap-lg-4 w-100">
                     <div class="w-100 d-flex flex-column justify-content-center gap-1 gap-lg-2">
                       <div>
-                        <button class="btn bg-primary text-white kaspi-btn-profi">Загрузить товары с Kaspi</button>
+                        <button class="btn bg-primary text-white kaspi-btn-profi fs-14-profi">Загрузить товары с Kaspi</button>
                       </div>
                       <div
                         class="d-flex flex-column flex-lg-row justify-content-center gap-0 gap-lg-1 text-blue-17 time-success-profi"
@@ -360,7 +348,7 @@
                     </div>
                     <div class="w-100 d-flex flex-column justify-content-center gap-1 gap-lg-2">
                       <div>
-                        <button class="btn bg-primary text-white kaspi-btn-profi">Загрузить прайс в Kaspi</button>
+                        <button class="btn bg-primary text-white kaspi-btn-profi fs-14-profi">Загрузить прайс в Kaspi</button>
                       </div>
                       <div
                         class="d-flex flex-column flex-lg-row justify-content-center gap-0 gap-lg-1 text-blue-17 time-success-profi"
@@ -371,11 +359,11 @@
                     </div>
                   </div>
                   <!-- dropdowns  -->
-                  <div class="w-100 w-sm-auto d-flex justify-content-end gap-2 gap-lg-3">
-                    <div class="w-100 w-sm-auto btn-group">
+                  <div class="w-mobile-100 d-flex justify-content-end gap-2 gap-lg-3">
+                    <div class="w-mobile-100 btn-group">
                       <button
                         type="button"
-                        class="btn bg-white text-secondary dropdown-toggle d-flex"
+                        class="btn bg-white text-secondary dropdown-toggle d-flex fs-14-profi"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
@@ -390,10 +378,10 @@
                         <li><button class="dropdown-item" type="button">24 месяца</button></li>
                       </ul>
                     </div>
-                    <div class="w-100 w-sm-auto btn-group">
+                    <div class="w-mobile-100 btn-group">
                       <button
                         type="button"
-                        class="btn bg-white text-secondary dropdown-toggle d-flex"
+                        class="btn bg-white text-secondary dropdown-toggle d-flex fs-14-profi"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
@@ -432,12 +420,42 @@
               </div>
             </div>
           </div>
+
           <!-- page content -->
+          <!-- product management -->
+          <div class="container-fluid product-management-box">
+            <div class="d-flex flex-column-reverse flex-sm-column gap-4 product-management-wrapper">
+              <div class="d-flex flex-wrap gap-2 gap-sm-3">
+                <button class="btn h-40 bg-light text-secondary product-management-grey-btn">Списать остатки</button>
+                <button class="btn h-40 bg-light text-secondary product-management-grey-btn">Настроить предзаказ</button>
+                <button class="btn h-40 bg-light text-secondary product-management-grey-btn">Снять с продажи</button>
+                <button class="btn h-40 bg-light text-secondary product-management-grey-btn">Настроить мин. остатки</button>
+              </div>
+              <div class="d-flex flex-wrap flex-grow-0 gap-2 py-2 px-12 border rounded w-fit">
+                <button class="btn product-btn-profi">
+                  <span class="d-none d-sm-block">Все товары</span>
+                  <span class="d-block d-sm-none">Все товары<br />(50)</span>
+                </button>
+                <button class="btn product-btn-profi">
+                  <span class="d-none d-sm-block">В наличии</span>
+                  <span class="d-block d-sm-none">В наличии<br />(50)</span>
+                </button>
+                <button class="btn product-btn-profi">
+                  <span class="d-none d-sm-block">Предзаказ</span>
+                  <span class="d-block d-sm-none">Предзаказ<br />(50)</span>
+                </button>
+                <button class="btn product-btn-profi">
+                  <span class="d-none d-sm-block">Сняты с продажи</span>
+                  <span class="d-block d-sm-none">Снятые<br />(50)</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- table -->
           <div class="page-content-wrapper pt-3">
             <div class="container-fluid">
               <!-- Widget  -->
-
-              <!-- Row 5 -->
               <div class="row">
                 <div class="col-12">
                   <div class="card">

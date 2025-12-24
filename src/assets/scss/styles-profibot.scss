@@ -72,8 +72,15 @@
 
 .kaspi-btn-profi {
   width: 286px;
+
   @media (width < 1510px) {
     width: 100%;
+  }
+}
+
+.fs-14-profi {
+  @media (width < 576px) {
+    font-size: 14px;
   }
 }
 
@@ -89,6 +96,10 @@
     background: $blue-6511;
     color: $primary;
   }
+
+  @media (width < 576px) {
+    width: 100%;
+  }
 }
 .dropdown-heading-profi {
   font-size: 14.4px;
@@ -100,6 +111,22 @@
 .filter-form-profi {
   padding: 10px 12px;
   width: 424px;
+
+  @media (width < 576px) {
+    width: 99dvw;
+  }
+}
+
+.btn-group.dropend-sm {
+  @media (width <576px) {
+    .dropdown-menu {
+      top: calc(100% + 6px) !important;
+      right: -13px !important;
+      left: auto !important;
+      transform: none !important;
+      margin-top: 0;
+    }
+  }
 }
 
 .btn.radio-btn-profi {
@@ -118,12 +145,79 @@
   color: $white;
 }
 
+.w-mobile-100 {
+  width: 100%;
+
+  @media (min-width: 576px) {
+    width: fit-content;
+  }
+}
+
+.m-profi-0 {
+  margin-left: 0;
+  margin-right: 0;
+  @media (width > 767px) {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+.product-btn-profi {
+  width: 179.5px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $azure-1575;
+  @media (width < 576px) {
+    width: 87.5px;
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}
+
+.product-management-box {
+  padding-block: 24px;
+  padding-inline: 0;
+
+  @media (width < 576px) {
+    padding-block: 20px;
+  }
+}
+
+.product-management-wrapper {
+  padding-inline: 12px;
+  @media (width < 576px) {
+    padding-block: 16px;
+    background: $white;
+    border-radius: 12px;
+  }
+}
+
+.product-management-grey-btn {
+  @media (width < 576px) {
+    width: 195px;
+    font-size: 14px;
+    padding-inline: 0;
+  }
+}
+.w-fit {
+  width: fit-content;
+}
 .gap-12 {
   gap: 12px;
 }
 .h-40 {
   height: 40px;
 }
+.px-12 {
+  padding-inline: 12px;
+}
+
 .bg-blue-6511 {
   background: $blue-6511;
 }
