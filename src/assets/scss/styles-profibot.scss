@@ -353,6 +353,11 @@
   width: 36px;
   height: 22px;
 }
+
+.btn.product-management-grey-btn.products-active-btn {
+  background: $primary !important;
+  color: #fff !important;
+}
 .w-fit {
   width: fit-content;
 }

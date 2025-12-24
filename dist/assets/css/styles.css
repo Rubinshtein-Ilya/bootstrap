@@ -7349,6 +7349,11 @@ table[data-app-toggle=table] {
   height: 22px;
 }
 
+.btn.product-management-grey-btn.products-active-btn {
+  background: #7859f4 !important;
+  color: #fff !important;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -7401,4 +7406,124 @@ table[data-app-toggle=table] {
 
 .text-blue-17 {
   color: rgb(30, 33, 57);
+}
+
+#dumping-modal-box {
+  display: none;
+}
+#dumping-modal-box.modal-active-profi {
+  display: block;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+}
+
+.profi-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 6px;
+  padding: 10px 12px;
+  min-width: 400px;
+  overflow-y: auto;
+  z-index: 1051;
+  border: 1px solid rgb(229, 231, 232);
+  box-shadow: 0px 4px 24px 0px rgba(25, 27, 28, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: rgb(30, 33, 57);
+  font-size: 14.4px;
+  font-weight: 700;
+  line-height: 21.6px;
+  letter-spacing: 0%;
+}
+.profi-modal__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profi-modal__heading h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+.profi-modal__heading .btn-close {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.profi-modal__heading .btn-close:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.profi-modal__heading .btn-close i {
+  font-size: 24px;
+  color: #000000;
+}
+
+.dumping-modal {
+  width: 543px;
+}
+
+.dumping-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dumping-item-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dumping-switch .form-check-input {
+  width: 51px !important;
+  height: 31px !important;
+}
+
+.modal-input-profi {
+  width: 100%;
+  height: 40px;
+  padding: 8px 12px 8px 12px;
+  border: 1px solid rgb(229, 231, 232);
+  border-radius: 6px;
+}
+
+.dumping-input-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-block: 6px;
+}
+
+.modal-btn-profi {
+  height: 42px;
+  width: 100%;
+  border: 1px solid rgb(120, 89, 244);
+  border-radius: 6px;
+  background: rgb(120, 89, 244);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
