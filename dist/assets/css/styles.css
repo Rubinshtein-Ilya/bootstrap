@@ -7354,6 +7354,11 @@ table[data-app-toggle=table] {
   color: #fff !important;
 }
 
+.product-btn-profi.active-filter {
+  background: rgba(120, 89, 244, 0.2);
+  color: #7859f4;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;

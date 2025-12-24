@@ -50,4 +50,10 @@ $(document).ready(function () {
     $("#remove-from-sale-modal-box").removeClass("modal-active-profi");
     $("body").removeClass("no-scroll");
   });
+
+  // Переключение активного класса у кнопок фильтров
+  $(".product-btn-profi").click(function () {
+    $(".product-btn-profi").removeClass("active-filter");
+    $(this).addClass("active-filter");
+  });
 });

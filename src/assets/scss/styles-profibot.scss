@@ -358,6 +358,11 @@
   background: $primary !important;
   color: #fff !important;
 }
+
+.product-btn-profi.active-filter {
+  background: rgba(120, 89, 244, 0.2);
+  color: $primary;
+}
 .w-fit {
   width: fit-content;
 }
