@@ -1,28 +1,43 @@
 $(document).ready(function () {
-  // Открытие модального окна при клике на кнопку
+  // Открытие модального окна при клике на кнопку "Управление остатками"
   $("#leftovers").click(function () {
-    console.log("Before remove:", $(".product-management-grey-btn").attr("class"));
-    // Убираем активный класс со всех кнопок
     $(".product-management-grey-btn").removeClass("products-active-btn");
-    console.log("After remove:", $(".product-management-grey-btn").attr("class"));
-    // Добавляем активный класс к текущей кнопке
     $(this).addClass("products-active-btn");
-    console.log("After add to this:", $(this).attr("class"));
-    // Открываем модальное окно
     $("#dumping-modal-box").addClass("modal-active-profi");
+    $("body").addClass("no-scroll");
   });
 
-  // Закрытие модального окна при клике на оверлей
-  $(".modal-overlay").click(function () {
-    console.log("Overlay click - removing class");
+  // Открытие модального окна при клике на кнопку "Настроить предзаказ"
+  $("#pre-order").click(function () {
     $(".product-management-grey-btn").removeClass("products-active-btn");
-    $("#dumping-modal-box").removeClass("modal-active-profi");
+    $(this).addClass("products-active-btn");
+    $("#preorder-modal-box").addClass("modal-active-profi");
+    $("body").addClass("no-scroll");
   });
 
-  // Закрытие модального окна при клике на кнопку закрытия
-  $(".btn-close").click(function () {
-    console.log("Close button click - removing class");
+  // Открытие модального окна при клике на кнопку "Настроить мин. остатки"
+  $("#set-up-balances").click(function () {
+    $(".product-management-grey-btn").removeClass("products-active-btn");
+    $(this).addClass("products-active-btn");
+    $("#balances-modal-box").addClass("modal-active-profi");
+    $("body").addClass("no-scroll");
+  });
+
+  // Закрытие модального окна при клике на оверлей (используем делегирование)
+  $(document).on("click", ".modal-overlay", function () {
     $(".product-management-grey-btn").removeClass("products-active-btn");
     $("#dumping-modal-box").removeClass("modal-active-profi");
+    $("#preorder-modal-box").removeClass("modal-active-profi");
+    $("#balances-modal-box").removeClass("modal-active-profi");
+    $("body").removeClass("no-scroll");
+  });
+
+  // Закрытие модального окна при клике на кнопку закрытия (используем делегирование)
+  $(document).on("click", ".btn-close", function () {
+    $(".product-management-grey-btn").removeClass("products-active-btn");
+    $("#dumping-modal-box").removeClass("modal-active-profi");
+    $("#preorder-modal-box").removeClass("modal-active-profi");
+    $("#balances-modal-box").removeClass("modal-active-profi");
+    $("body").removeClass("no-scroll");
   });
 });

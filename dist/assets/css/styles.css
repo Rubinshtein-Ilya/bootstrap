@@ -7408,10 +7408,18 @@ table[data-app-toggle=table] {
   color: rgb(30, 33, 57);
 }
 
-#dumping-modal-box {
+.no-scroll {
+  overflow: hidden;
+}
+
+#dumping-modal-box,
+#preorder-modal-box,
+#balances-modal-box {
   display: none;
 }
-#dumping-modal-box.modal-active-profi {
+#dumping-modal-box.modal-active-profi,
+#preorder-modal-box.modal-active-profi,
+#balances-modal-box.modal-active-profi {
   display: block;
 }
 
@@ -7435,7 +7443,6 @@ table[data-app-toggle=table] {
   background: white;
   border-radius: 6px;
   padding: 10px 12px;
-  min-width: 400px;
   overflow-y: auto;
   z-index: 1051;
   border: 1px solid rgb(229, 231, 232);
@@ -7448,6 +7455,15 @@ table[data-app-toggle=table] {
   font-weight: 700;
   line-height: 21.6px;
   letter-spacing: 0%;
+  width: 543px;
+}
+@media (width < 576px) {
+  .profi-modal {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 100%;
+  }
 }
 .profi-modal__heading {
   display: flex;
@@ -7476,10 +7492,6 @@ table[data-app-toggle=table] {
 .profi-modal__heading .btn-close i {
   font-size: 24px;
   color: #000000;
-}
-
-.dumping-modal {
-  width: 543px;
 }
 
 .dumping-row {
@@ -7526,4 +7538,16 @@ table[data-app-toggle=table] {
   justify-content: center;
   align-items: center;
   color: #fff;
+}
+
+.modal-btn-profi-outlined {
+  height: 42px;
+  width: 100%;
+  border: 1px solid rgb(120, 89, 244);
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(120, 89, 244);
 }
