@@ -1,0 +1,289 @@
+<div class="table-wrapper">
+  <div class="table-block">
+    <table class="table d-none d-sm-table">
+      <thead>
+        <tr>
+          <th scope="col">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+              <label class="form-check-label" for="flexCheckDefault"></label>
+            </div>
+          </th>
+          <th scope="col">Картинка</th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Склад</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Артикул</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Каспи код</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Название</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Цена</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Остаток</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col h-100">
+              <span>Предзаказ</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Демпинг</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Статус</span>
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Запас, дней</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Минимальное <br />количество</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Всего продаж</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Сред. продажи <br />в месяц</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Дней с последней<br />продажи</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Последняя продажа</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Последняя цена</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Родитель</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+          <th scope="col">
+            <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
+              <span>Подарки</span>
+              <img src="/assets/images/profibot/sorter.svg" alt="sort button" />
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        @@include('products-table-item.html')
+      </tbody>
+    </table>
+
+    <div class="w-100 d-flex flex-column d-sm-none">
+      <!-- mobile item -->
+      <div class="w-100 d-flex gap-3 p-3">
+        <div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label" for="flexCheckDefault"></label>
+          </div>
+        </div>
+        <div class="w-100 d-flex flex-column gap-12">
+          <div class="d-flex w-100% gap-2 align-items-center">
+            <div>
+              <img src="/assets/images/profibot/bike.png" alt="product image" width="42" height="42" />
+            </div>
+            <div>Велосипед</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Склад</div>
+            <div>PP1</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Артикул</div>
+            <div>123456789</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Код каспи</div>
+            <div>123456789</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Цена</div>
+            <div>10 000 ₸</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Остаток</div>
+            <div>34</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Предзаказ</div>
+            <div>100</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Статус</div>
+            <div>В наличии</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Демпинг</div>
+            <div>PP1</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Действия</div>
+            <div>PP1</div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 d-flex gap-3 p-3 border-top">
+        <div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label" for="flexCheckDefault"></label>
+          </div>
+        </div>
+        <div class="w-100 d-flex flex-column gap-12">
+          <div class="d-flex w-100% gap-2 align-items-center">
+            <div>
+              <img src="/assets/images/profibot/bike.png" alt="product image" width="42" height="42" />
+            </div>
+            <div>Велосипед</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Склад</div>
+            <div>PP1</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Артикул</div>
+            <div>123456789</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Код каспи</div>
+            <div>123456789</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Цена</div>
+            <div>10 000 ₸</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Остаток</div>
+            <div>34</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Предзаказ</div>
+            <div>100</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Статус</div>
+            <div>В наличии</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Демпинг</div>
+            <div>PP1</div>
+          </div>
+          <div class="d-flex w-100% justify-content-between align-items-center">
+            <div>Действия</div>
+            <div>PP1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Пагинация -->
+  <!-- <div class="w-100 d-flex py-3 px-3 bg-white rounded-bottom">
+    <div class="d-flex align-items-center">
+      <div>Отображаются</div>
+      <div class="w-mobile-100 btn-group">
+        <button
+          type="button"
+          class="btn bg-white text-secondary dropdown-toggle d-flex fs-14-profi"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          3 месяца
+          <img src="/assets/images/profibot/arrow-down.svg" alt="filter icon" />
+        </button>
+        <ul class="dropdown-menu dropdown-menu-start dropdown-menu-profi">
+        
+          <li><button class="dropdown-item" type="button">3 месяца</button></li>
+          <li><button class="dropdown-item" type="button">6 месяцев</button></li>
+          <li><button class="dropdown-item" type="button">12 месяцев</button></li>
+          <li><button class="dropdown-item" type="button">24 месяца</button></li>
+        </ul>
+      </div>
+      <div>из 40</div>
+    </div>
+    <ul class="pagination flat-rounded-pagination mb-0">
+      <li class="page-item disabled">
+        <a
+          href="javascript:void(0)"
+          class="page-link"
+          data-effect="wave"
+          aria-label="Previous"
+          tabindex="-1"
+          aria-disabled="true"
+        >
+          <i class="bx bx-chevron-left"></i>
+        </a>
+      </li>
+      <li class="page-item active" aria-current="page">
+        <a href="javascript:void(0)" class="page-link" data-effect="wave">1</a>
+      </li>
+      <li class="page-item" aria-current="page">
+        <a href="javascript:void(0)" class="page-link" data-effect="wave">2</a>
+      </li>
+      <li class="page-item" aria-current="page">
+        <a href="javascript:void(0)" class="page-link" data-effect="wave">3</a>
+      </li>
+      <li class="page-item">
+        <a href="javascript:void(0)" class="page-link" data-effect="wave" aria-label="Next">
+          <i class="bx bx-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </div> -->
+</div>
