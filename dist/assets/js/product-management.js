@@ -96,10 +96,12 @@ function createDesktopProduct(product) {
   <td>${product.warehouse}</td>
   <td class="text-primary fw-bold">${product.article}</td>
   <td class="text-primary fw-bold">${product.code}</td>
-  <td>
-    <input type="text" class="form-control table-input-profi" placeholder="" value="${product.title}" />
+   <td>
+    <textarea class="form-control table-input-profi auto-resize" rows="1">${product.title}</textarea>
   </td>
-  <td class="fw-bold">${product.price}</td>
+  <td class="fw-bold">
+    <textarea class="form-control table-input-profi auto-resize fw-bold" rows="1">${product.price}</textarea>
+  </td>
   <td>${product.remainder}</td>
   <td>${product.preorder}</td>
   <td>
