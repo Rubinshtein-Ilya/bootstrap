@@ -7035,6 +7035,28 @@ table[data-app-toggle=table] {
     opacity: 0.6;
   }
 }
+@media (width < 430px) {
+  .whatsApp-btn {
+    font-size: 12px;
+  }
+}
+
+.products-filter-block-profi {
+  padding-inline: 12px;
+  gap: 8px;
+  flex-grow: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (width < 430px) {
+  .products-filter-block-profi {
+    padding-inline: 6px;
+    gap: 4px;
+    flex-grow: 1;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 
 .search-icon-profi {
   width: 24px;
@@ -7055,6 +7077,11 @@ table[data-app-toggle=table] {
   font-size: 13px;
   font-weight: 600;
 }
+@media (width < 430px) {
+  .time-success-profi {
+    font-size: 10px;
+  }
+}
 
 .kaspi-btn-profi {
   width: 286px;
@@ -7068,6 +7095,11 @@ table[data-app-toggle=table] {
 @media (width < 576px) {
   .fs-14-profi {
     font-size: 14px;
+  }
+}
+@media (width < 430px) {
+  .fs-14-profi {
+    font-size: 12px;
   }
 }
 
@@ -7085,6 +7117,11 @@ table[data-app-toggle=table] {
 @media (width < 576px) {
   .dropdown-menu.dropdown-menu-profi {
     width: 100%;
+  }
+}
+@media (width < 430px) {
+  .dropdown-menu.dropdown-menu-profi {
+    font-size: 12px;
   }
 }
 
@@ -7170,6 +7207,13 @@ table[data-app-toggle=table] {
     padding: 4px 6px;
   }
 }
+@media (width < 430px) {
+  .product-btn-profi {
+    width: 87.5px;
+    font-size: 10px;
+    padding: 4px;
+  }
+}
 
 .product-management-box {
   padding-block: 24px;
@@ -7195,8 +7239,15 @@ table[data-app-toggle=table] {
 
 @media (width < 576px) {
   .product-management-grey-btn {
-    width: 195px;
+    width: calc(50% - 4px);
     font-size: 14px;
+    padding-inline: 0;
+  }
+}
+@media (width < 430px) {
+  .product-management-grey-btn {
+    width: calc(50% - 4px);
+    font-size: 12px;
     padding-inline: 0;
   }
 }
@@ -7357,6 +7408,27 @@ table[data-app-toggle=table] {
 .product-btn-profi.active-filter {
   background: rgba(120, 89, 244, 0.2);
   color: #7859f4;
+}
+
+.not-visible {
+  display: none;
+}
+@media (width < 430px) {
+  .not-visible {
+    display: inline;
+  }
+}
+
+@media (width < 576px) {
+  .mobile-card-table-row {
+    font-size: 14px;
+  }
+}
+
+@media (width < 576px) {
+  .form-switch .form-check-input.form-check-input-profi {
+    width: 32px;
+  }
 }
 
 .w-fit {
