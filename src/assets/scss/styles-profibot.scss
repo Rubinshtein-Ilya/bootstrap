@@ -322,6 +322,13 @@
   &:focus {
     border: 1px solid $primary;
   }
+
+  &.auto-resize {
+    min-height: 40px;
+    height: 40px;
+    resize: none;
+    overflow: hidden;
+  }
 }
 
 .badge-profi {

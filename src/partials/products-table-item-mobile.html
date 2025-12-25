@@ -82,12 +82,28 @@
       </div>
       <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
         <div>Действия</div>
-        <div>PP1</div>
+        <div class="dropup">
+          <button
+            class="badge-btn-profi cursor-pointer dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton7"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            ⋮
+          </button>
+          <ul class="dropdown-menu h-fit" aria-labelledby="dropdownMenuButton7">
+            <li><a class="dropdown-item" href="#">Списать остатки</a></li>
+            <li><a class="dropdown-item" href="#">Настроить предзаказ</a></li>
+            <li><a class="dropdown-item" href="#">Снять с продажи</a></li>
+            <li><a class="dropdown-item" href="#">Настроить мин. остатки</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="mobile-pagination">
+  <div class="mobile-pagination" id="mobile-pagination">
     <div class="d-flex align-items-center gap-1 gap-sm-2">
       <div>Отображаются</div>
       <div class="dropup">
