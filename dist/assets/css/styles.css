@@ -7160,6 +7160,12 @@ table[data-app-toggle=table] {
   background: #ced4da;
   color: #fff;
 }
+@media (width < 430px) {
+  .btn.radio-btn-profi {
+    font-size: 12px;
+    line-height: 24px;
+  }
+}
 
 .btn-check:checked + .btn {
   border: none;
