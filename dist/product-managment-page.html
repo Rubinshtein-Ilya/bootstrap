@@ -442,16 +442,16 @@
           <div class="container-fluid product-management-box">
             <div class="d-flex flex-column-reverse flex-sm-column gap-4 product-management-wrapper">
               <div class="d-flex flex-wrap gap-2 gap-sm-3">
-                <button id="leftovers" class="btn h-40 bg-light text-secondary product-management-grey-btn">
+                <button id="leftovers" class="btn h-40 bg-light text-secondary product-management-grey-btn" disabled>
                   Управление остатками
                 </button>
-                <button id="pre-order" class="btn h-40 bg-light text-secondary product-management-grey-btn">
+                <button id="pre-order" class="btn h-40 bg-light text-secondary product-management-grey-btn" disabled>
                   Настроить предзаказ
                 </button>
-                <button id="remove-from-sale" class="btn h-40 bg-light text-secondary product-management-grey-btn">
+                <button id="remove-from-sale" class="btn h-40 bg-light text-secondary product-management-grey-btn" disabled>
                   Снять с продажи
                 </button>
-                <button id="set-up-balances" class="btn h-40 bg-light text-secondary product-management-grey-btn">
+                <button id="set-up-balances" class="btn h-40 bg-light text-secondary product-management-grey-btn" disabled>
                   Настроить мин. остатки
                 </button>
               </div>
@@ -617,67 +617,6 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="card" />
-                        <label class="form-check-label" for="card"></label>
-                      </div>
-                    </th>
-                    <td>
-                      <img src="assets/images/profibot/bike.png" alt="product image" />
-                    </td>
-                    <td>PP1</td>
-                    <td class="text-primary fw-bold">123456789</td>
-                    <td class="text-primary fw-bold">123456789</td>
-                    <td>
-                      <textarea class="form-control table-input-profi auto-resize" rows="1">Детский Велик</textarea>
-                    </td>
-                    <td class="fw-bold">
-                      <textarea class="form-control table-input-profi auto-resize fw-bold price-textarea" rows="1">10 000 ₸</textarea>
-                    </td>
-                    <td>34</td>
-                    <td>100</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-1">
-                        <div class="td-profi-text">Не настроен</div>
-                        <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" />
-                      </div>
-                    </td>
-                    <td class="text-start">
-                      <div class="d-flex align-items-center gap-1">
-                        <span class="badge-profi badge-profi-success">В наличии</span>
-
-                        <div class="dropdown">
-                          <button
-                            class="badge-btn-profi cursor-pointer dropdown-toggle"
-                            type="button"
-                            id="dropdownMenuButton7"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            ⋮
-                          </button>
-                          <ul class="dropdown-menu h-fit" aria-labelledby="dropdownMenuButton7">
-                            <li><a class="dropdown-item" href="#">Списать остатки</a></li>
-                            <li><a class="dropdown-item" href="#">Настроить предзаказ</a></li>
-                            <li><a class="dropdown-item" href="#">Снять с продажи</a></li>
-                            <li><a class="dropdown-item" href="#">Настроить мин. остатки</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </td>
-                    <td>34</td>
-                    <td>34</td>
-                    <td>34</td>
-                    <td>34</td>
-                    <td>34</td>
-                    <td>16.10.2025</td>
-                    <td>34</td>
-                    <td>34</td>
-                    <td>34</td>
-                  </tr>
-
                   <tr id="t-pagination">
                     <td colspan="20" class="p-0">
                       <div class="table-paggination-wrapper">
@@ -736,114 +675,13 @@
                       </div>
                     </td>
                   </tr>
+
                 </tbody>
               </table>
 
+              <!-- mobile products  -->
               <div class="w-100 d-flex flex-column d-sm-none">
-                <!-- mobile item -->
-                <div class="w-100 d-flex gap-3 p-3 border-bottom">
-                  <div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                      <label class="form-check-label" for="flexCheckDefault"></label>
-                    </div>
-                  </div>
-                  <div class="w-100 d-flex flex-column gap-12">
-                    <div class="d-flex w-100% gap-2 align-items-center mobile-card-table-row">
-                      <div>
-                        <img src="assets/images/profibot/bike.png" alt="product image" width="42" height="42" />
-                      </div>
-                      <div>Велосипед</div>
-                    </div>
-                    <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
-                      <div>Склад</div>
-                      <div>PP1</div>
-                    </div>
-                    <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
-                      <div>Артикул</div>
-                      <div class="text-primary fw-bold">123456789</div>
-                    </div>
-                    <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
-                      <div>Код каспи</div>
-                      <div class="text-primary fw-bold">123456789</div>
-                    </div>
-                    <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
-                      <div>Цена</div>
-                      <div class="fw-bold">10 000 ₸</div>
-                    </div>
-                    <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
-                      <div>Остаток</div>
-                      <div>34</div>
-                    </div>
-                    <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
-                      <div>Предзаказ</div>
-                      <div>100</div>
-                    </div>
-                    <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
-                      <div>Статус</div>
-                      <div><span class="badge-profi-mobile badge-profi-success">В наличии</span></div>
-                    </div>
-                    <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
-                      <div>Демпинг</div>
-                      <div class="d-flex align-items-center">
-                        <div class="form-check form-switch">
-                          <input
-                            class="form-check-input form-check-input-profi"
-                            type="checkbox"
-                            id="flexSwitchCheckChecked"
-                            checked
-                          />
-                          <label class="form-check-label" for="flexSwitchCheckChecked"></label>
-                        </div>
-                        <div class="dropup">
-                          <button
-                            class="td-profi-text cursor-pointer dropdown-toggle"
-                            type="button"
-                            id="dropdownMenuButton7"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            <div class="d-flex align-items-center gap-1">
-                              <div class="d-flex flex-column align-items-start mobile-card-table-row">
-                                <div class="td-profi-text">7-10 поз.</div>
-                                <div class="td-profi-text">750 мин. цена</div>
-                              </div>
-
-                              <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" />
-                            </div>
-                          </button>
-                          <ul class="dropdown-menu h-fit" aria-labelledby="dropdownMenuButton7">
-                            <li><a class="dropdown-item" href="#">Списать остатки</a></li>
-                            <li><a class="dropdown-item" href="#">Настроить предзаказ</a></li>
-                            <li><a class="dropdown-item" href="#">Снять с продажи</a></li>
-                            <li><a class="dropdown-item" href="#">Настроить мин. остатки</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
-                      <div>Действия</div>
-                      <div class="dropup">
-                        <button
-                          class="badge-btn-profi cursor-pointer dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton7"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          ⋮
-                        </button>
-                        <ul class="dropdown-menu h-fit" aria-labelledby="dropdownMenuButton7">
-                          <li><a class="dropdown-item" href="#">Списать остатки</a></li>
-                          <li><a class="dropdown-item" href="#">Настроить предзаказ</a></li>
-                          <li><a class="dropdown-item" href="#">Снять с продажи</a></li>
-                          <li><a class="dropdown-item" href="#">Настроить мин. остатки</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
+                <!-- mobile pagination  -->
                 <div class="mobile-pagination" id="mobile-pagination">
                   <div class="d-flex align-items-center gap-1 gap-sm-2">
                     <div>Отображаются</div>

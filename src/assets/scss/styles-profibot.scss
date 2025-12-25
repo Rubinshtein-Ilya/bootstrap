@@ -273,6 +273,11 @@
   }
 }
 
+.product-management-grey-btn:disabled {
+  opacity: 1;
+  border: none;
+}
+
 .table-wrapper {
   margin-left: 12px;
   margin-right: 12px;

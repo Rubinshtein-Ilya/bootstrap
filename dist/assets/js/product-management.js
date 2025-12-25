@@ -1,5 +1,6 @@
 const products = [
   {
+    id: 1,
     warehouse: "PP1",
     article: "123456789",
     code: "123456789",
@@ -18,8 +19,10 @@ const products = [
     last_price: "34",
     parent: "34",
     present: "34",
+    withDumping: true,
   },
   {
+    id: 2,
     warehouse: "PP1",
     article: "123456789",
     code: "123456789",
@@ -38,8 +41,10 @@ const products = [
     last_price: "34",
     parent: "34",
     present: "34",
+    withDumping: false,
   },
   {
+    id: 3,
     warehouse: "PP1",
     article: "123456789",
     code: "123456789",
@@ -58,8 +63,10 @@ const products = [
     last_price: "34",
     parent: "34",
     present: "34",
+    withDumping: false,
   },
   {
+    id: 3,
     warehouse: "PP1",
     article: "123456789",
     code: "123456789",
@@ -78,6 +85,7 @@ const products = [
     last_price: "34",
     parent: "34",
     present: "34",
+    withDumping: false,
   },
 ];
 
@@ -86,7 +94,7 @@ function createDesktopProduct(product) {
   <tr>
   <th scope="row">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="card" />
+      <input class="form-check-input" type="checkbox" value="" id=${"card-" + product.id} />
       <label class="form-check-label" for="card"></label>
     </div>
   </th>
@@ -100,15 +108,38 @@ function createDesktopProduct(product) {
     <textarea class="form-control table-input-profi auto-resize" rows="1">${product.title}</textarea>
   </td>
   <td class="fw-bold">
-    <textarea class="form-control table-input-profi auto-resize fw-bold" rows="1">${product.price}</textarea>
+    <textarea class="form-control table-input-profi auto-resize fw-bold price-textarea" rows="1">${
+      product.price
+    }</textarea>
   </td>
   <td>${product.remainder}</td>
   <td>${product.preorder}</td>
   <td>
-    <div class="d-flex align-items-center gap-1">
-      <div class="td-profi-text">Не настроен</div>
-      <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" />
-    </div>
+    ${
+      product.withDumping
+        ? `<div class="d-flex align-items-center">
+          <div class="d-flex align-items-center gap-1">
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input form-check-input-profi"
+                type="checkbox"
+                id="flexSwitchCheckChecked"
+                checked
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+            </div>
+            <div class="d-flex flex-column align-items-start">
+              <div class="td-profi-text">7-10 поз.</div>
+              <div class="td-profi-text">750 мин. цена</div>
+            </div>
+            <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" class="dumping-btn" />
+          </div>
+        </div>`
+        : `<div class="d-flex align-items-center gap-1">
+          <div class="td-profi-text">Не настроен</div>
+          <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" class="dumping-btn" />
+        </div>`
+    }
   </td>
   <td class="text-start">
     <div class="d-flex align-items-center gap-1">
@@ -116,7 +147,7 @@ function createDesktopProduct(product) {
       ${product.status === "success" ? "В наличии" : product.status === "warning" ? "Сняты с продажи" : "Предзаказ"}
       </span>
 
-      <div class="dropdown">
+      <div class="dropstart">
         <button
           class="badge-btn-profi cursor-pointer dropdown-toggle"
           type="button"
@@ -127,10 +158,10 @@ function createDesktopProduct(product) {
           ⋮
         </button>
         <ul class="dropdown-menu h-fit" aria-labelledby="dropdownMenuButton7">
-          <li><a class="dropdown-item" href="#">Списать остатки</a></li>
-          <li><a class="dropdown-item" href="#">Настроить предзаказ</a></li>
-          <li><a class="dropdown-item" href="#">Снять с продажи</a></li>
-          <li><a class="dropdown-item" href="#">Настроить мин. остатки</a></li>
+          <li class="dumping-dropdow-item dropdown-item">Списать остатки</li>
+          <li class="preorder-dropdow-item dropdown-item">Настроить предзаказ</li>
+          <li class="remove-from-sale-dropdow-item dropdown-item">Снять с продажи</li>
+          <li class="balances-dropdow-item dropdown-item">Настроить мин. остатки</li>
         </ul>
       </div>
     </div>
@@ -196,11 +227,32 @@ function createProductMobile(product) {
       </div>
       <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
         <div>Демпинг</div>
-         <div class="d-flex align-items-center gap-1">
-               
- <div>Не настроен</div>
-                <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" />
-              </div>
+         ${
+           product.withDumping
+             ? `<div class="d-flex align-items-center">
+          <div class="d-flex align-items-center gap-1">
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input form-check-input-profi"
+                type="checkbox"
+                id="flexSwitchCheckChecked"
+                checked
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+            </div>
+            <div class="d-flex flex-column align-items-start">
+              <div class="td-profi-text">7-10 поз.</div>
+              <div class="td-profi-text">750 мин. цена</div>
+            </div>
+            <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" />
+          </div>
+        </div>`
+             : `<div class="d-flex align-items-center gap-1">
+          <div class="td-profi-text">Не настроен</div>
+          <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" />
+        </div>`
+         }
+       
       </div>
       <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
         <div>Действия</div>
@@ -215,10 +267,10 @@ function createProductMobile(product) {
           ⋮
         </button>
         <ul class="dropdown-menu h-fit" aria-labelledby="dropdownMenuButton7">
-          <li><a class="dropdown-item" href="#">Списать остатки</a></li>
-          <li><a class="dropdown-item" href="#">Настроить предзаказ</a></li>
-          <li><a class="dropdown-item" href="#">Снять с продажи</a></li>
-          <li><a class="dropdown-item" href="#">Настроить мин. остатки</a></li>
+          <li class="dumping-dropdow-item dropdown-item">Списать остатки</li>
+          <li class="preorder-dropdow-item dropdown-item">Настроить предзаказ</li>
+          <li class="remove-from-sale-dropdow-item dropdown-item">Снять с продажи</li>
+          <li class="balances-dropdow-item dropdown-item">Настроить мин. остатки</li>
         </ul>
       </div>
       </div>
@@ -230,39 +282,57 @@ function createProductMobile(product) {
 $(document).ready(function () {
   // Открытие модального окна при клике на кнопку "Управление остатками"
   $("#leftovers").click(function () {
-    $(".product-management-grey-btn").removeClass("products-active-btn");
-    $(this).addClass("products-active-btn");
     $("#dumping-modal-box").addClass("modal-active-profi");
     $("body").addClass("no-scroll");
   });
 
   // Открытие модального окна при клике на кнопку "Настроить предзаказ"
   $("#pre-order").click(function () {
-    $(".product-management-grey-btn").removeClass("products-active-btn");
-    $(this).addClass("products-active-btn");
     $("#preorder-modal-box").addClass("modal-active-profi");
     $("body").addClass("no-scroll");
   });
 
   // Открытие модального окна при клике на кнопку "Настроить мин. остатки"
   $("#set-up-balances").click(function () {
-    $(".product-management-grey-btn").removeClass("products-active-btn");
-    $(this).addClass("products-active-btn");
     $("#balances-modal-box").addClass("modal-active-profi");
     $("body").addClass("no-scroll");
   });
 
   // Открытие модального окна при клике на кнопку "Снять с продажи"
   $("#remove-from-sale").click(function () {
-    $(".product-management-grey-btn").removeClass("products-active-btn");
-    $(this).addClass("products-active-btn");
     $("#remove-from-sale-modal-box").addClass("modal-active-profi");
+    $("body").addClass("no-scroll");
+  });
+
+  // Открытие модальных окон при клике на элементы dropdown
+  $(document).on("click", ".dumping-dropdow-item", function () {
+    $("#dumping-modal-box").addClass("modal-active-profi");
+    $("body").addClass("no-scroll");
+  });
+
+  $(document).on("click", ".preorder-dropdow-item", function () {
+    $("#preorder-modal-box").addClass("modal-active-profi");
+    $("body").addClass("no-scroll");
+  });
+
+  $(document).on("click", ".remove-from-sale-dropdow-item", function () {
+    $("#remove-from-sale-modal-box").addClass("modal-active-profi");
+    $("body").addClass("no-scroll");
+  });
+
+  $(document).on("click", ".balances-dropdow-item", function () {
+    $("#balances-modal-box").addClass("modal-active-profi");
+    $("body").addClass("no-scroll");
+  });
+
+  // Открытие модального окна при клике на иконку в графе "Дэмпинг"
+  $(document).on("click", ".dumping-btn", function () {
+    $("#dumping-modal-box").addClass("modal-active-profi");
     $("body").addClass("no-scroll");
   });
 
   // Закрытие модального окна при клике на оверлей (используем делегирование)
   $(document).on("click", ".modal-overlay", function () {
-    $(".product-management-grey-btn").removeClass("products-active-btn");
     $("#dumping-modal-box").removeClass("modal-active-profi");
     $("#preorder-modal-box").removeClass("modal-active-profi");
     $("#balances-modal-box").removeClass("modal-active-profi");
@@ -272,7 +342,6 @@ $(document).ready(function () {
 
   // Закрытие модального окна при клике на кнопку закрытия (используем делегирование)
   $(document).on("click", ".btn-close", function () {
-    $(".product-management-grey-btn").removeClass("products-active-btn");
     $("#dumping-modal-box").removeClass("modal-active-profi");
     $("#preorder-modal-box").removeClass("modal-active-profi");
     $("#balances-modal-box").removeClass("modal-active-profi");
@@ -305,6 +374,26 @@ $(document).ready(function () {
     $(this).css("height", this.scrollHeight + "px");
   }
 
+  // Функция проверки состояния чекбоксов и управления кнопками
+  function updateButtonsState() {
+    // Проверяем, есть ли хоть один выбранный чекбокс (кроме mainCheckbox и form-switch)
+    const hasChecked =
+      $(".form-check-input").not("#mainCheckbox").not(".form-switch .form-check-input").filter(":checked").length > 0;
+
+    if (hasChecked) {
+      // Если есть выбранные - активируем кнопки
+      $(".product-management-grey-btn").prop("disabled", false).addClass("products-active-btn");
+    } else {
+      // Если нет выбранных - деактивируем кнопки
+      $(".product-management-grey-btn").prop("disabled", true).removeClass("products-active-btn");
+    }
+  }
+
+  // Отслеживаем изменения всех чекбоксов
+  $(document).on("change", ".form-check-input", function () {
+    updateButtonsState();
+  });
+
   // Применяем к существующим textarea
   $(".auto-resize").each(autoResizeTextarea);
 
@@ -320,30 +409,14 @@ $(document).ready(function () {
       startWidth = resizer.parentElement.offsetWidth;
       resizer.classList.add("active");
 
-      // Устанавливаем начальную позицию линии
-      const rect = resizer.getBoundingClientRect();
-      document.documentElement.style.setProperty("--resizer-x", rect.left + rect.width / 2 + "px");
-
       document.onmousemove = (e) => {
-        const newWidth = startWidth + (e.pageX - startX);
-        // Ограничиваем минимальную ширину 10px
-        if (newWidth >= 10) {
-          resizer.parentElement.style.width = newWidth + "px";
-          // Обновляем позицию линии
-          document.documentElement.style.setProperty("--resizer-x", e.pageX + "px");
-        }
+        resizer.parentElement.style.width = startWidth + (e.pageX - startX) + "px";
       };
 
       document.onmouseup = () => {
         document.onmousemove = null;
         resizer.classList.remove("active");
       };
-    });
-
-    // Обновляем позицию линии при наведении
-    resizer.addEventListener("mouseenter", (e) => {
-      const rect = resizer.getBoundingClientRect();
-      document.documentElement.style.setProperty("--resizer-x", rect.left + rect.width / 2 + "px");
     });
   });
 });
