@@ -337,7 +337,8 @@
 }
 
 .table-input-profi {
-  width: 150px;
+  min-width: 140px;
+  width: 100%;
   border: none;
 
   &:focus {
@@ -497,4 +498,35 @@
 }
 .text-blue-17 {
   color: $blue-17;
+}
+
+.resizable-table th {
+  position: relative;
+}
+
+.resizable-table {
+  position: relative;
+}
+
+.resizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  cursor: col-resize;
+  z-index: 1;
+
+  &:hover::after,
+  &.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100vh;
+    border-left: 2px dashed #fdeded;
+    pointer-events: none;
+  }
 }

@@ -100,7 +100,9 @@ function createDesktopProduct(product) {
     <textarea class="form-control table-input-profi auto-resize" rows="1">${product.title}</textarea>
   </td>
   <td class="fw-bold">
-    <textarea class="form-control table-input-profi auto-resize fw-bold" rows="1">${product.price}</textarea>
+    <textarea class="form-control table-input-profi auto-resize fw-bold price-textarea" rows="1">${
+      product.price
+    }</textarea>
   </td>
   <td>${product.remainder}</td>
   <td>${product.preorder}</td>
@@ -310,4 +312,24 @@ $(document).ready(function () {
 
   // Применяем при вводе текста
   $(document).on("input", ".auto-resize", autoResizeTextarea);
+
+  // Изменения ширины колонок таблицы (после добавления товаров)
+  document.querySelectorAll(".resizer").forEach((resizer) => {
+    let startX, startWidth;
+
+    resizer.addEventListener("mousedown", (e) => {
+      startX = e.pageX;
+      startWidth = resizer.parentElement.offsetWidth;
+      resizer.classList.add("active");
+
+      document.onmousemove = (e) => {
+        resizer.parentElement.style.width = startWidth + (e.pageX - startX) + "px";
+      };
+
+      document.onmouseup = () => {
+        document.onmousemove = null;
+        resizer.classList.remove("active");
+      };
+    });
+  });
 });

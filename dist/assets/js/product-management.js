@@ -122,7 +122,7 @@ function createDesktopProduct(product) {
           type="button"
           id="dropdownMenuButton7"
           data-bs-toggle="dropdown"
-          aria-expanded="false"
+          aria-expanded="false" 
         >
           ⋮
         </button>
@@ -310,4 +310,40 @@ $(document).ready(function () {
 
   // Применяем при вводе текста
   $(document).on("input", ".auto-resize", autoResizeTextarea);
+
+  // Изменения ширины колонок таблицы (после добавления товаров)
+  document.querySelectorAll(".resizer").forEach((resizer) => {
+    let startX, startWidth;
+
+    resizer.addEventListener("mousedown", (e) => {
+      startX = e.pageX;
+      startWidth = resizer.parentElement.offsetWidth;
+      resizer.classList.add("active");
+
+      // Устанавливаем начальную позицию линии
+      const rect = resizer.getBoundingClientRect();
+      document.documentElement.style.setProperty("--resizer-x", rect.left + rect.width / 2 + "px");
+
+      document.onmousemove = (e) => {
+        const newWidth = startWidth + (e.pageX - startX);
+        // Ограничиваем минимальную ширину 10px
+        if (newWidth >= 10) {
+          resizer.parentElement.style.width = newWidth + "px";
+          // Обновляем позицию линии
+          document.documentElement.style.setProperty("--resizer-x", e.pageX + "px");
+        }
+      };
+
+      document.onmouseup = () => {
+        document.onmousemove = null;
+        resizer.classList.remove("active");
+      };
+    });
+
+    // Обновляем позицию линии при наведении
+    resizer.addEventListener("mouseenter", (e) => {
+      const rect = resizer.getBoundingClientRect();
+      document.documentElement.style.setProperty("--resizer-x", rect.left + rect.width / 2 + "px");
+    });
+  });
 });
