@@ -244,12 +244,12 @@ function createProductMobile(product) {
               <div class="td-profi-text">7-10 поз.</div>
               <div class="td-profi-text">750 мин. цена</div>
             </div>
-            <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" />
+            <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" class="dumping-btn" />
           </div>
         </div>`
              : `<div class="d-flex align-items-center gap-1">
           <div class="td-profi-text">Не настроен</div>
-          <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" />
+          <img src="assets/images/profibot/edit.svg" alt="Edit icon" style="cursor: pointer" class="dumping-btn" />
         </div>`
          }
        
@@ -418,5 +418,17 @@ $(document).ready(function () {
         resizer.classList.remove("active");
       };
     });
+  });
+
+  // Обновление времени при клике на "Загрузить товары с Kaspi"
+  $("#load-products-btn").click(function () {
+    $(".last-time-string").addClass("d-none");
+    $("#load-products-time-progress").removeClass("d-none");
+  });
+
+  // Обновление времени при клике на "Загрузить прайс в Kaspi"
+  $("#load-price-btn").click(function () {
+    $(".last-price-str").addClass("d-none");
+    $("#load-price-time-progress").removeClass("d-none");
   });
 });
