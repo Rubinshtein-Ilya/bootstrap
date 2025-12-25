@@ -94,8 +94,10 @@ function createDesktopProduct(product) {
   <tr>
   <th scope="row">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id=${"card-" + product.id} />
-      <label class="form-check-label" for="card"></label>
+      <input class="form-check-input" style="border: 1px solid #80808073;" type="checkbox" value="" id=${
+        "card-" + product.id
+      } />
+      <label class="form-check-label " for="card"></label>
     </div>
   </th>
   <td>
@@ -184,7 +186,7 @@ function createProductMobile(product) {
   <div class="w-100 d-flex gap-3 p-3 border-bottom">
     <div>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+        <input class="form-check-input" style="border: 1px solid #80808073;" type="checkbox" value="" id="flexCheckDefault" />
         <label class="form-check-label" for="flexCheckDefault"></label>
       </div>
     </div>
