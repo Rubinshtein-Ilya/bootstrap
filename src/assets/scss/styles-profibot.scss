@@ -131,6 +131,27 @@
     font-size: 12px;
   }
 }
+.dropdown-menu.dropdown-menu-filters-profi.show {
+  display: block;
+}
+
+.dropdown-menu.dropdown-menu-filters-profi {
+  .dropdown-item {
+    padding: 6px 12px 6px 12px;
+  }
+  .dropdown-item:hover {
+    background: $blue-6511;
+    color: $primary;
+  }
+
+  @media (width < 576px) {
+    width: 100%;
+  }
+
+  @media (width < 430px) {
+    font-size: 12px;
+  }
+}
 .dropdown-heading-profi {
   font-size: 14.4px;
   font-weight: 700;

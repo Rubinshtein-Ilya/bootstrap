@@ -122,7 +122,7 @@ function createDesktopProduct(product) {
           type="button"
           id="dropdownMenuButton7"
           data-bs-toggle="dropdown"
-          aria-expanded="false"
+          aria-expanded="false" 
         >
           ⋮
         </button>

@@ -287,8 +287,20 @@
                         <form class="d-flex flex-column gap-12 filter-form-profi">
                           <li class="d-flex flex-column gap-2">
                             <div class="dropdown-heading-profi">Выбор склада</div>
-                            <div>
-                              <input type="text" class="form-control py-2 rounded border border-1 h-40" placeholder="Склад" />
+                            <div class="btn-group w-full">
+                              <button
+                                type="button"
+                                class="btn bg-white dropdown-toggle w-full py-2 rounded border border-1 h-40"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Склад
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-start dropdown-menu-filters-profi">
+                                <!-- Dropdown menu links -->
+                                <li><button class="dropdown-item" type="button">Склад 1</button></li>
+                                <li><button class="dropdown-item" type="button">Склад 2</button></li>
+                              </ul>
                             </div>
                           </li>
                           <li class="d-flex flex-column gap-2">

@@ -7125,6 +7125,28 @@ table[data-app-toggle=table] {
   }
 }
 
+.dropdown-menu.dropdown-menu-filters-profi.show {
+  display: block;
+}
+
+.dropdown-menu.dropdown-menu-filters-profi .dropdown-item {
+  padding: 6px 12px 6px 12px;
+}
+.dropdown-menu.dropdown-menu-filters-profi .dropdown-item:hover {
+  background: rgba(120, 89, 244, 0.11);
+  color: #7859f4;
+}
+@media (width < 576px) {
+  .dropdown-menu.dropdown-menu-filters-profi {
+    width: 100%;
+  }
+}
+@media (width < 430px) {
+  .dropdown-menu.dropdown-menu-filters-profi {
+    font-size: 12px;
+  }
+}
+
 .dropdown-heading-profi {
   font-size: 14.4px;
   font-weight: 700;
