@@ -15,6 +15,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@validide/resizable-table-columns": "^2.1.0",
     "browser-sync": "^3.0.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",

@@ -497,12 +497,20 @@ $(document).ready(function () {
     let startX, startWidth;
 
     resizer.addEventListener("mousedown", (e) => {
+      e.preventDefault();
       startX = e.pageX;
-      startWidth = resizer.parentElement.offsetWidth;
+
+      // Получаем th элемент (родитель resizer)
+      const th = resizer.parentElement;
+      startWidth = th.offsetWidth;
+
       resizer.classList.add("active");
 
       document.onmousemove = (e) => {
-        resizer.parentElement.style.width = startWidth + (e.pageX - startX) + "px";
+        const newWidth = startWidth + (e.pageX - startX);
+        th.style.width = newWidth + "px";
+        th.style.minWidth = newWidth + "px";
+        th.style.maxWidth = newWidth + "px";
       };
 
       document.onmouseup = () => {

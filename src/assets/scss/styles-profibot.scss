@@ -339,10 +339,11 @@
   text-wrap: nowrap;
   height: 100% !important;
   min-height: 100% !important;
+  overflow: hidden;
 }
 
 .table-input-profi {
-  min-width: 140px;
+  min-width: 120px;
   width: 100%;
   border: none;
 
