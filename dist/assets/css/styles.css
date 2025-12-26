@@ -7217,7 +7217,7 @@ table[data-app-toggle=table] {
 }
 
 .product-btn-profi {
-  width: 179.5px;
+  min-width: 179.5px;
   height: 48px;
   display: flex;
   flex-direction: row;
@@ -7230,6 +7230,7 @@ table[data-app-toggle=table] {
 }
 @media (width < 576px) {
   .product-btn-profi {
+    min-width: 0;
     width: 87.5px;
     font-size: 12px;
     padding: 4px 6px;
@@ -7566,19 +7567,9 @@ table[data-app-toggle=table] {
   right: 0;
   width: 5px;
   height: 100%;
+  border-right: 1px dashed #fdeded;
   cursor: col-resize;
   z-index: 1;
-}
-.resizer:hover::after, .resizer.active::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100vh;
-  border-right: 2px dashed #fdeded;
-  pointer-events: none;
 }
 
 .sort-icon {

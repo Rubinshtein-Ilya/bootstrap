@@ -219,7 +219,7 @@
 }
 
 .product-btn-profi {
-  width: 179.5px;
+  min-width: 179.5px;
   height: 48px;
   display: flex;
   flex-direction: row;
@@ -230,6 +230,7 @@
   font-weight: 700;
   color: $azure-1575;
   @media (width < 576px) {
+    min-width: 0;
     width: 87.5px;
     font-size: 12px;
     padding: 4px 6px;
@@ -547,22 +548,23 @@
   right: 0;
   width: 5px;
   height: 100%;
+  border-right: 1px dashed #fdeded;
 
   cursor: col-resize;
   z-index: 1;
 
-  &:hover::after,
-  &.active::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100vh;
-    border-right: 2px dashed #fdeded;
-    pointer-events: none;
-  }
+  //   &:hover::after,
+  //   &.active::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //     width: 2px;
+  //     height: 100vh;
+  //     border-right: 2px dashed #fdeded;
+  //     pointer-events: none;
+  //   }
 }
 
 // Стили для иконок сортировки

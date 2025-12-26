@@ -231,7 +231,7 @@ function createDesktopProduct(product) {
         </div>`
     }
   </td>
-  <td data-column="status" class="text-start hidden-overflow-cell">
+  <td data-column="status" class="text-start ">
     <div class="d-flex align-items-center gap-1">
       <span class="badge-profi badge-profi-${product.status}">
       ${product.status === "success" ? "В наличии" : product.status === "warning" ? "Сняты с продажи" : "Предзаказ"}
@@ -275,8 +275,10 @@ function createProductMobile(product) {
   <div class="w-100 d-flex gap-3 p-3 border-bottom">
     <div>
       <div class="form-check">
-        <input class="form-check-input" style="border: 1px solid #80808073;" type="checkbox" value="" id="flexCheckDefault" />
-        <label class="form-check-label" for="flexCheckDefault"></label>
+        <input class="form-check-input" style="border: 1px solid #80808073;" type="checkbox" value="" id="${
+          "mobile-card-" + product.id
+        }" />
+        <label class="form-check-label" for="${"mobile-card-" + product.id}"></label>
       </div>
     </div>
     <div class="w-100 d-flex flex-column gap-12">
@@ -372,7 +374,6 @@ function createProductMobile(product) {
   </div>
   `;
 }
-// <li class="dumping-dropdow-item dropdown-item">Управление остатками</li>
 
 $(document).ready(function () {
   // Открытие модального окна при клике на кнопку "Управление остатками"
@@ -466,6 +467,10 @@ $(document).ready(function () {
     $(".form-check-input").not(".form-switch .form-check-input").prop("checked", this.checked);
   });
 
+  // Обработчик для мобильного главного чекбокса (используем делегирование)
+  $(document).on("click", "#mainCheckboxMobile", function () {
+    $(".form-check-input").not(".form-switch .form-check-input").prop("checked", this.checked);
+  });
   // Добавляем карточки товаров
   const $tpagination = $("#t-pagination");
   const $tmobilepagination = $("#mobile-pagination");
