@@ -346,6 +346,7 @@
   min-width: 120px;
   width: 100%;
   border: none;
+  padding-left: 5px;
 
   &:focus {
     border: 1px solid $primary;
@@ -525,10 +526,19 @@
 
 .resizable-table th {
   position: relative;
+  overflow: hidden;
+}
+
+.resizable-table td {
+  padding-right: 15px;
 }
 
 .resizable-table {
   position: relative;
+}
+
+.table-head-col {
+  overflow: visible;
 }
 
 .resizer {
@@ -537,6 +547,7 @@
   right: 0;
   width: 5px;
   height: 100%;
+
   cursor: col-resize;
   z-index: 1;
 
@@ -549,7 +560,7 @@
     transform: translateX(-50%);
     width: 2px;
     height: 100vh;
-    border-left: 2px dashed #fdeded;
+    border-right: 2px dashed #fdeded;
     pointer-events: none;
   }
 }
@@ -559,4 +570,12 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
   cursor: pointer;
   display: inline-block;
+}
+
+.hidden-overflow-cell {
+  overflow: hidden;
+}
+
+.price-textarea {
+  padding-left: 5px;
 }

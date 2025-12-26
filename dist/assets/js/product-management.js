@@ -180,7 +180,7 @@ const products = [
 function createDesktopProduct(product) {
   return `
   <tr>
-  <th scope="row">
+  <th scope="row" data-column="checkbox">
     <div class="form-check">
       <input class="form-check-input" style="border: 1px solid #80808073;" type="checkbox" value="" id=${
         "card-" + product.id
@@ -188,23 +188,23 @@ function createDesktopProduct(product) {
       <label class="form-check-label " for="card"></label>
     </div>
   </th>
-  <td>
+  <td data-column="image" class='hidden-overflow-cell'>
     <img src="assets/images/profibot/bike.png" alt="product image" />
   </td>
-  <td>${product.warehouse}</td>
-  <td class="text-primary fw-bold">${product.article}</td>
-  <td class="text-primary fw-bold">${product.code}</td>
-   <td>
+  <td data-column="warehouse" class="hidden-overflow-cell">${product.warehouse}</td>
+  <td data-column="article" class="text-primary fw-bold hidden-overflow-cell">${product.article}</td>
+  <td data-column="code" class="text-primary fw-bold hidden-overflow-cell">${product.code}</td>
+   <td data-column="title" class="hidden-overflow-cell">
     <textarea class="form-control table-input-profi auto-resize" rows="1">${product.title}</textarea>
   </td>
-  <td class="fw-bold">
+  <td data-column="price" class="fw-bold hidden-overflow-cell">
     <textarea class="form-control table-input-profi auto-resize fw-bold price-textarea" rows="1">${
       product.price
     }</textarea>
   </td>
-  <td>${product.remainder}</td>
-  <td>${product.preorder}</td>
-  <td>
+  <td data-column="remainder" class="hidden-overflow-cell">${product.remainder}</td>
+  <td data-column="preorder" class="hidden-overflow-cell">${product.preorder}</td>
+  <td data-column="dumping" class="hidden-overflow-cell">
     ${
       product.withDumping
         ? `<div class="d-flex align-items-center">
@@ -231,7 +231,7 @@ function createDesktopProduct(product) {
         </div>`
     }
   </td>
-  <td class="text-start">
+  <td data-column="status" class="text-start hidden-overflow-cell">
     <div class="d-flex align-items-center gap-1">
       <span class="badge-profi badge-profi-${product.status}">
       ${product.status === "success" ? "В наличии" : product.status === "warning" ? "Сняты с продажи" : "Предзаказ"}
@@ -257,15 +257,15 @@ function createDesktopProduct(product) {
       </div>
     </div>
   </td>
-  <td>${product.stock}</td>
-  <td>${product.min}</td>
-  <td>${product.total}</td>
-  <td>${product.avr_sales}</td>
-  <td>${product.days_since_last_sale}</td>
-  <td>${product.last_sale}</td>
-  <td>${product.last_price}</td>
-  <td>${product.parent}</td>
-  <td>${product.present}</td>
+  <td data-column="stock" class="hidden-overflow-cell">${product.stock}</td>
+  <td data-column="min" class="hidden-overflow-cell">${product.min}</td>
+  <td data-column="total" class="hidden-overflow-cell">${product.total}</td>
+  <td data-column="avr_sales" class="hidden-overflow-cell">${product.avr_sales}</td>
+  <td data-column="days_since_last_sale" class="hidden-overflow-cell">${product.days_since_last_sale}</td>
+  <td data-column="last_sale" class="hidden-overflow-cell">${product.last_sale}</td>
+  <td data-column="last_price" class="hidden-overflow-cell">${product.last_price}</td>
+  <td data-column="parent" class="hidden-overflow-cell">${product.parent}</td>
+  <td data-column="present" class="hidden-overflow-cell">${product.present}</td>
 </tr>
   `;
 }
@@ -507,7 +507,7 @@ $(document).ready(function () {
 
   // Изменения ширины колонок таблицы (после добавления товаров)
   document.querySelectorAll(".resizer").forEach((resizer) => {
-    let startX, startWidth;
+    let startX, startWidth, columnName;
 
     resizer.addEventListener("mousedown", (e) => {
       e.preventDefault();
@@ -517,13 +517,27 @@ $(document).ready(function () {
       const th = resizer.parentElement;
       startWidth = th.offsetWidth;
 
+      // Получаем имя колонки из data-column атрибута
+      columnName = th.getAttribute("data-column");
+
       resizer.classList.add("active");
 
       document.onmousemove = (e) => {
         const newWidth = startWidth + (e.pageX - startX);
+
+        // Применяем ширину к заголовку
         th.style.width = newWidth + "px";
         th.style.minWidth = newWidth + "px";
         th.style.maxWidth = newWidth + "px";
+
+        // Применяем ширину ко всем ячейкам с таким же data-column
+        if (columnName) {
+          document.querySelectorAll(`td[data-column="${columnName}"]`).forEach((td) => {
+            td.style.width = newWidth + "px";
+            td.style.minWidth = newWidth + "px";
+            td.style.maxWidth = newWidth + "px";
+          });
+        }
       };
 
       document.onmouseup = () => {

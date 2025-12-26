@@ -501,7 +501,7 @@
               <table class="table d-none d-sm-table mb-0 resizable-table">
                 <thead id="table-header">
                   <tr>
-                    <th scope="col">
+                    <th scope="col" data-column="checkbox">
                       <div class="form-check">
                         <input
                           class="form-check-input"
@@ -513,8 +513,8 @@
                         <label class="form-check-label" for="mainCheckbox"></label>
                       </div>
                     </th>
-                    <th scope="col">Картинка</th>
-                    <th scope="col">
+                    <th scope="col" data-column="image">Картинка</th>
+                    <th scope="col" data-column="warehouse">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Склад</span>
                         <img
@@ -527,7 +527,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="article">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Артикул</span>
                         <img
@@ -540,7 +540,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="code">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Каспи код</span>
                         <img
@@ -553,7 +553,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="title">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Название</span>
                         <img
@@ -566,7 +566,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="price">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Цена</span>
                         <img
@@ -579,7 +579,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="remainder">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Остаток</span>
                         <img
@@ -592,7 +592,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="preorder">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col h-100">
                         <span>Предзаказ</span>
                         <img
@@ -605,7 +605,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="dumping">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Демпинг</span>
                         <img
@@ -618,13 +618,13 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="status">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Статус</span>
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="stock">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Запас, дней</span>
                         <img
@@ -637,7 +637,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="min">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Минимальное <br />количество</span>
                         <img
@@ -650,7 +650,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="total">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Всего продаж</span>
                         <img
@@ -663,7 +663,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="avr_sales">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Сред. продажи <br />в месяц</span>
                         <img
@@ -676,7 +676,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="days_since_last_sale">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Дней с последней<br />продажи</span>
                         <img
@@ -689,7 +689,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="last_sale">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Последняя продажа</span>
                         <img
@@ -702,7 +702,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="last_price">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Последняя цена</span>
                         <img
@@ -715,7 +715,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="parent">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Родитель</span>
                         <img
@@ -728,7 +728,7 @@
                       </div>
                       <div class="resizer"></div>
                     </th>
-                    <th scope="col">
+                    <th scope="col" data-column="present">
                       <div class="d-flex gap-1 align-items-center text-secondary table-head-col">
                         <span>Подарки</span>
                         <img
