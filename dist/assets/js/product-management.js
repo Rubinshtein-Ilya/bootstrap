@@ -283,7 +283,7 @@ function createProductMobile(product) {
         <div>
           <img src="assets/images/profibot/bike.png" alt="product image" width="42" height="42" />
         </div>
-        <div>${product.title}</div>
+        <textarea class="form-control table-input-profi auto-resize" rows="1">${product.title}</textarea>
       </div>
       <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
         <div>Склад</div>
@@ -299,7 +299,9 @@ function createProductMobile(product) {
       </div>
       <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
         <div>Цена</div>
-        <div class="fw-bold">${product.price}</div>
+         <textarea class="form-control table-input-profi-mobile auto-resize fw-bold price-textarea" rows="1">${
+           product.price
+         }</textarea>
       </div>
       <div class="d-flex w-100% justify-content-between align-items-center mobile-card-table-row">
         <div>Остаток</div>
