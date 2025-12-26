@@ -248,7 +248,8 @@ function createDesktopProduct(product) {
           ⋮
         </button>
         <ul class="dropdown-menu h-fit" aria-labelledby="dropdownMenuButton7">
-          <li class="dumping-dropdow-item dropdown-item">Списать остатки</li>
+         <li class="remove-overs-dropdow-item dropdown-item">Списать остатки</li>
+          <li class="dumping-dropdow-item dropdown-item">Управление остатками</li>
           <li class="preorder-dropdow-item dropdown-item">Настроить предзаказ</li>
           <li class="remove-from-sale-dropdow-item dropdown-item">Снять с продажи</li>
           <li class="balances-dropdow-item dropdown-item">Настроить мин. остатки</li>
@@ -359,7 +360,8 @@ function createProductMobile(product) {
           ⋮
         </button>
         <ul class="dropdown-menu h-fit" aria-labelledby="dropdownMenuButton7">
-          <li class="dumping-dropdow-item dropdown-item">Списать остатки</li>
+           <li class="remove-overs-dropdow-item dropdown-item">Списать остатки</li>
+          <li class="dumping-dropdow-item dropdown-item">Управление остатками</li>
           <li class="preorder-dropdow-item dropdown-item">Настроить предзаказ</li>
           <li class="remove-from-sale-dropdow-item dropdown-item">Снять с продажи</li>
           <li class="balances-dropdow-item dropdown-item">Настроить мин. остатки</li>
@@ -396,7 +398,16 @@ $(document).ready(function () {
     $("body").addClass("no-scroll");
   });
 
+  $("#remove-overs").click(function () {
+    $("#remove-overs-modal-box").addClass("modal-active-profi");
+    $("body").addClass("no-scroll");
+  });
+
   // Открытие модальных окон при клике на элементы dropdown
+  $(document).on("click", ".remove-overs-dropdow-item", function () {
+    $("#remove-overs-modal-box").addClass("modal-active-profi");
+    $("body").addClass("no-scroll");
+  });
   $(document).on("click", ".dumping-dropdow-item", function () {
     $("#dumping-modal-box").addClass("modal-active-profi");
     $("body").addClass("no-scroll");
@@ -429,6 +440,7 @@ $(document).ready(function () {
     $("#preorder-modal-box").removeClass("modal-active-profi");
     $("#balances-modal-box").removeClass("modal-active-profi");
     $("#remove-from-sale-modal-box").removeClass("modal-active-profi");
+    $("#remove-overs-modal-box").removeClass("modal-active-profi");
     $("body").removeClass("no-scroll");
   });
 
@@ -438,6 +450,7 @@ $(document).ready(function () {
     $("#preorder-modal-box").removeClass("modal-active-profi");
     $("#balances-modal-box").removeClass("modal-active-profi");
     $("#remove-from-sale-modal-box").removeClass("modal-active-profi");
+    $("#remove-overs-modal-box").removeClass("modal-active-profi");
     $("body").removeClass("no-scroll");
   });
 
