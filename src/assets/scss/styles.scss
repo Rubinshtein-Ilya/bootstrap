@@ -30,7 +30,7 @@ File: Main Css File
 @import "../vendors/bootstrap/scss/functions";
 @import "../vendors/bootstrap/scss/variables";
 @import "variables";
-@import "variables-profibot";
+@import "../../products-page/variables-profibot";
 @import "../vendors/bootstrap/scss/mixins";
 
 @import "mixins";
@@ -115,5 +115,5 @@ File: Main Css File
 @import "styles/pages/gallery";
 @import "./responsive";
 @import "./dark";
-@import "./styles-profibot";
-@import "./styles/styles-modals";
+@import "../../products-page/styles-profibot";
+@import "../../products-page/styles-modals";
