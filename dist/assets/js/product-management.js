@@ -249,7 +249,7 @@ function createDesktopProduct(product) {
         </button>
         <ul class="dropdown-menu h-fit" aria-labelledby="dropdownMenuButton7">
          <li class="remove-overs-dropdow-item dropdown-item">Списать остатки</li>
-          <li class="dumping-dropdow-item dropdown-item">Управление остатками</li>
+     
           <li class="preorder-dropdow-item dropdown-item">Настроить предзаказ</li>
           <li class="remove-from-sale-dropdow-item dropdown-item">Снять с продажи</li>
           <li class="balances-dropdow-item dropdown-item">Настроить мин. остатки</li>
@@ -361,7 +361,7 @@ function createProductMobile(product) {
         </button>
         <ul class="dropdown-menu h-fit" aria-labelledby="dropdownMenuButton7">
            <li class="remove-overs-dropdow-item dropdown-item">Списать остатки</li>
-          <li class="dumping-dropdow-item dropdown-item">Управление остатками</li>
+        
           <li class="preorder-dropdow-item dropdown-item">Настроить предзаказ</li>
           <li class="remove-from-sale-dropdow-item dropdown-item">Снять с продажи</li>
           <li class="balances-dropdow-item dropdown-item">Настроить мин. остатки</li>
@@ -372,6 +372,7 @@ function createProductMobile(product) {
   </div>
   `;
 }
+// <li class="dumping-dropdow-item dropdown-item">Управление остатками</li>
 
 $(document).ready(function () {
   // Открытие модального окна при клике на кнопку "Управление остатками"
