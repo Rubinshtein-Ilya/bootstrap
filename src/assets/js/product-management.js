@@ -620,6 +620,16 @@ $(document).ready(function () {
     const $tpagination = $("#t-pagination");
     const $tmobilepagination = $("#mobile-pagination");
 
+    // Сохраняем текущие ширины колонок перед удалением
+    const columnWidths = {};
+    $("thead th[data-column]").each(function () {
+      const columnName = $(this).attr("data-column");
+      const width = $(this).css("width");
+      if (width && width !== "auto") {
+        columnWidths[columnName] = width;
+      }
+    });
+
     // Удаляем все строки товаров (все tr кроме заголовка и пагинации)
     $tpagination.prevAll("tr").remove();
     $tmobilepagination.prevAll(".w-100.d-flex.gap-3.p-3.border-bottom").remove();
@@ -628,6 +638,23 @@ $(document).ready(function () {
     sortedProducts.forEach((product) => {
       $tpagination.before(createDesktopProduct(product));
       $tmobilepagination.before(createProductMobile(product));
+    });
+
+    // Восстанавливаем ширины колонок
+    Object.keys(columnWidths).forEach((columnName) => {
+      const width = columnWidths[columnName];
+      // Применяем к заголовку
+      $(`thead th[data-column="${columnName}"]`).css({
+        width: width,
+        minWidth: width,
+        maxWidth: width,
+      });
+      // Применяем ко всем ячейкам с таким же data-column
+      $(`td[data-column="${columnName}"]`).css({
+        width: width,
+        minWidth: width,
+        maxWidth: width,
+      });
     });
 
     // Переинициализируем обработчики для новых элементов
