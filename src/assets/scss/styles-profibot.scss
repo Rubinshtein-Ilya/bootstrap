@@ -535,3 +535,10 @@
     pointer-events: none;
   }
 }
+
+// Стили для иконок сортировки
+.sort-icon {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}

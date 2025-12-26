@@ -7554,6 +7554,12 @@ table[data-app-toggle=table] {
   pointer-events: none;
 }
 
+.sort-icon {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
 .no-scroll {
   overflow: hidden;
 }

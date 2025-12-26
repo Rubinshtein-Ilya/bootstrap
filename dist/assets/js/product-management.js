@@ -2,90 +2,178 @@ const products = [
   {
     id: 1,
     warehouse: "PP1",
-    article: "123456789",
-    code: "123456789",
-    title: "Детский Велик",
-    price: "10 000 ₸",
-    remainder: "34",
-    preorder: "34",
+    article: "987654321",
+    code: "KZ001234",
+    title: "Детский Велосипед",
+    price: "45 000 ₸",
+    remainder: "12",
+    preorder: "5",
     dumping: "Не настроен",
     status: "warning",
-    stock: "34",
-    min: "34",
-    total: "34",
-    avr_sales: "34",
-    days_since_last_sale: "34",
-    last_sale: "16.10.2025",
-    last_price: "34",
-    parent: "34",
-    present: "34",
+    stock: "15",
+    min: "10",
+    total: "120",
+    avr_sales: "25",
+    days_since_last_sale: "5",
+    last_sale: "20.12.2024",
+    last_price: "43 000 ₸",
+    parent: "Велосипеды",
+    present: "2",
     withDumping: true,
   },
   {
     id: 2,
-    warehouse: "PP1",
+    warehouse: "PP2",
     article: "123456789",
-    code: "123456789",
-    title: "Детский Велик",
-    price: "10 000 ₸",
-    remainder: "34",
-    preorder: "34",
-    dumping: "Не настроен",
+    code: "KZ005678",
+    title: "Самокат взрослый",
+    price: "25 000 ₸",
+    remainder: "8",
+    preorder: "15",
+    dumping: "Настроен",
     status: "preorder",
-    stock: "34",
-    min: "34",
-    total: "34",
-    avr_sales: "34",
-    days_since_last_sale: "34",
-    last_sale: "16.10.2025",
-    last_price: "34",
-    parent: "34",
-    present: "34",
+    stock: "7",
+    min: "5",
+    total: "85",
+    avr_sales: "18",
+    days_since_last_sale: "12",
+    last_sale: "14.12.2024",
+    last_price: "24 500 ₸",
+    parent: "Самокаты",
+    present: "5",
     withDumping: false,
   },
   {
     id: 3,
     warehouse: "PP1",
-    article: "123456789",
-    code: "123456789",
-    title: "Детский Велик",
-    price: "10 000 ₸",
-    remainder: "34",
-    preorder: "34",
+    article: "555666777",
+    code: "KZ009012",
+    title: "Электросамокат",
+    price: "120 000 ₸",
+    remainder: "3",
+    preorder: "0",
     dumping: "Не настроен",
     status: "success",
-    stock: "34",
-    min: "34",
-    total: "34",
-    avr_sales: "34",
-    days_since_last_sale: "34",
-    last_sale: "16.10.2025",
-    last_price: "34",
-    parent: "34",
-    present: "34",
+    stock: "30",
+    min: "2",
+    total: "45",
+    avr_sales: "8",
+    days_since_last_sale: "2",
+    last_sale: "24.12.2024",
+    last_price: "115 000 ₸",
+    parent: "Электротранспорт",
+    present: "1",
     withDumping: false,
   },
   {
-    id: 3,
+    id: 4,
+    warehouse: "PP3",
+    article: "111222333",
+    code: "KZ003456",
+    title: "Ролики детские",
+    price: "18 500 ₸",
+    remainder: "25",
+    preorder: "10",
+    dumping: "Настроен",
+    status: "success",
+    stock: "45",
+    min: "15",
+    total: "200",
+    avr_sales: "42",
+    days_since_last_sale: "1",
+    last_sale: "25.12.2024",
+    last_price: "18 000 ₸",
+    parent: "Ролики",
+    present: "8",
+    withDumping: true,
+  },
+  {
+    id: 5,
+    warehouse: "PP2",
+    article: "444555666",
+    code: "KZ007890",
+    title: "Скейтборд профессиональный",
+    price: "35 000 ₸",
+    remainder: "6",
+    preorder: "3",
+    dumping: "Не настроен",
+    status: "warning",
+    stock: "10",
+    min: "4",
+    total: "65",
+    avr_sales: "12",
+    days_since_last_sale: "8",
+    last_sale: "18.12.2024",
+    last_price: "34 500 ₸",
+    parent: "Скейтборды",
+    present: "3",
+    withDumping: false,
+  },
+  {
+    id: 6,
     warehouse: "PP1",
-    article: "123456789",
-    code: "123456789",
-    title: "Детский Велик",
-    price: "10 000 ₸",
-    remainder: "34",
-    preorder: "34",
+    article: "777888999",
+    code: "KZ002345",
+    title: "Гироскутер",
+    price: "85 000 ₸",
+    remainder: "15",
+    preorder: "7",
+    dumping: "Настроен",
+    status: "success",
+    stock: "20",
+    min: "8",
+    total: "95",
+    avr_sales: "20",
+    days_since_last_sale: "3",
+    last_sale: "23.12.2024",
+    last_price: "82 000 ₸",
+    parent: "Электротранспорт",
+    present: "4",
+    withDumping: true,
+  },
+  {
+    id: 7,
+    warehouse: "PP3",
+    article: "222333444",
+    code: "KZ006789",
+    title: "Беговел для малышей",
+    price: "15 000 ₸",
+    remainder: "30",
+    preorder: "12",
     dumping: "Не настроен",
     status: "success",
-    stock: "34",
-    min: "34",
-    total: "34",
-    avr_sales: "34",
-    days_since_last_sale: "34",
-    last_sale: "16.10.2025",
-    last_price: "34",
-    parent: "34",
-    present: "34",
+    stock: "60",
+    min: "20",
+    total: "310",
+    avr_sales: "55",
+    days_since_last_sale: "0",
+    last_sale: "26.12.2024",
+    last_price: "14 800 ₸",
+    parent: "Беговелы",
+    present: "10",
     withDumping: false,
+  },
+  {
+    id: 8,
+    warehouse: "PP2",
+    article: "666777888",
+    code: "KZ004567",
+    title: "Трюковой самокат",
+    price: "32 000 ₸",
+    remainder: "4",
+    preorder: "8",
+    dumping: "Настроен",
+    status: "preorder",
+    stock: "12",
+    min: "6",
+    total: "72",
+    avr_sales: "15",
+    days_since_last_sale: "15",
+    last_sale: "11.12.2024",
+    last_price: "31 500 ₸",
+    parent: "Самокаты",
+    present: "6",
+    withDumping: true,
   },
 ];
 
@@ -432,5 +520,136 @@ $(document).ready(function () {
   $("#load-price-btn").click(function () {
     $(".last-price-str").addClass("d-none");
     $("#load-price-time-progress").removeClass("d-none");
+  });
+
+  // Сортировка таблицы
+  let sortStates = {}; // Хранит состояние сортировки для каждой колонки: null, 'desc', 'asc'
+  const originalProducts = [...products]; // Сохраняем изначальный порядок товаров
+  const defaultSortIcon = "assets/images/profibot/sorter.svg";
+
+  // Функция для извлечения числового значения из строки (например, "10 000 ₸" -> 10000)
+  function parseNumericValue(value) {
+    if (typeof value !== "string") return value;
+    // Убираем все пробелы и символы валюты, оставляем только цифры и точки
+    const numericString = value.replace(/[^\d.]/g, "");
+    const parsed = parseFloat(numericString);
+    return isNaN(parsed) ? value : parsed;
+  }
+
+  // Функция для парсинга даты в формате DD.MM.YYYY
+  function parseDate(dateString) {
+    if (typeof dateString !== "string") return null;
+    const parts = dateString.split(".");
+    if (parts.length !== 3) return null;
+    // Создаем дату в формате YYYY-MM-DD для корректного парсинга
+    return new Date(parts[2], parts[1] - 1, parts[0]);
+  }
+
+  // Функция сравнения значений с учетом типа данных
+  function compareValues(a, b, column) {
+    // Для дат
+    if (column === "last_sale") {
+      const dateA = parseDate(a);
+      const dateB = parseDate(b);
+      if (dateA && dateB) {
+        return dateA - dateB;
+      }
+    }
+
+    // Для числовых значений
+    const numA = parseNumericValue(a);
+    const numB = parseNumericValue(b);
+
+    if (typeof numA === "number" && typeof numB === "number") {
+      return numA - numB;
+    }
+
+    // Для строковых значений
+    if (typeof a === "string" && typeof b === "string") {
+      return a.localeCompare(b, "ru");
+    }
+
+    return 0;
+  }
+
+  // Функция для перерисовки таблицы
+  function renderProducts(sortedProducts) {
+    const $tpagination = $("#t-pagination");
+    const $tmobilepagination = $("#mobile-pagination");
+
+    // Удаляем все строки товаров (все tr кроме заголовка и пагинации)
+    $tpagination.prevAll("tr").remove();
+    $tmobilepagination.prevAll(".w-100.d-flex.gap-3.p-3.border-bottom").remove();
+
+    // Добавляем отсортированные товары
+    sortedProducts.forEach((product) => {
+      $tpagination.before(createDesktopProduct(product));
+      $tmobilepagination.before(createProductMobile(product));
+    });
+
+    // Переинициализируем обработчики для новых элементов
+    $(".auto-resize").each(autoResizeTextarea);
+    updateButtonsState();
+  }
+
+  // Функция для обновления иконки сортировки
+  function updateSortIcon($icon, state) {
+    if (state === "desc") {
+      // Стрелка вниз (убывание)
+      $icon.css("transform", "rotate(180deg)");
+      $icon.css("opacity", "1");
+    } else if (state === "asc") {
+      // Стрелка вверх (возрастание)
+      $icon.css("transform", "rotate(0deg)");
+      $icon.css("opacity", "1");
+    } else {
+      // Дефолтная иконка
+      $icon.css("transform", "rotate(0deg)");
+      $icon.css("opacity", "0.5");
+    }
+  }
+
+  // Обработчик клика на иконку сортировки
+  $(document).on("click", ".sort-icon", function () {
+    const column = $(this).data("column");
+    const $clickedIcon = $(this);
+
+    // Определяем новое состояние сортировки (цикл: null -> desc -> asc -> null)
+    if (!sortStates[column]) {
+      sortStates[column] = "desc"; // Первый клик - по убыванию
+    } else if (sortStates[column] === "desc") {
+      sortStates[column] = "asc"; // Второй клик - по возрастанию
+    } else {
+      sortStates[column] = null; // Третий клик - возврат к изначальному
+    }
+
+    // Сбрасываем состояние других колонок
+    Object.keys(sortStates).forEach((key) => {
+      if (key !== column) {
+        sortStates[key] = null;
+      }
+    });
+
+    let sortedProducts;
+
+    if (sortStates[column] === null) {
+      // Возвращаем изначальный порядок
+      sortedProducts = [...originalProducts];
+    } else {
+      // Сортируем массив products
+      sortedProducts = [...originalProducts].sort((a, b) => {
+        const comparison = compareValues(a[column], b[column], column);
+        return sortStates[column] === "asc" ? comparison : -comparison;
+      });
+    }
+
+    // Перерисовываем таблицу
+    renderProducts(sortedProducts);
+
+    // Обновляем иконки всех колонок
+    $(".sort-icon").each(function () {
+      const col = $(this).data("column");
+      updateSortIcon($(this), sortStates[col] || null);
+    });
   });
 });
