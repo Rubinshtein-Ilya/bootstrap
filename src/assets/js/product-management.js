@@ -734,3 +734,91 @@ $(document).ready(function () {
     });
   });
 });
+
+// Sticky header при скролле
+$(window).on("scroll", function () {
+  const $thead = $("#table-header");
+  const $table = $thead.closest("table");
+  const $tableWrapper = $table.closest(".table-wrapper");
+
+  if ($table.length === 0) return;
+
+  const tableOffset = $table.offset().top;
+  const scrollTop = $(window).scrollTop();
+  const stickyPoint = 70; // Расстояние от верха экрана
+
+  if (scrollTop + stickyPoint >= tableOffset) {
+    // Создаем sticky header если его еще нет
+    if ($(".sticky-header-clone").length === 0) {
+      // Клонируем thead
+      const $theadClone = $thead.clone();
+      $theadClone.attr("id", "table-header-clone");
+      $theadClone.addClass("sticky-header-clone");
+
+      // Создаем таблицу для клона
+      const $stickyTable = $("<table></table>");
+      $stickyTable.addClass("table resizable-table mb-0 sticky-table");
+      $stickyTable.append($theadClone);
+
+      // Получаем размеры
+      const tableWidth = $table.outerWidth();
+      const wrapperWidth = $tableWrapper.outerWidth();
+      const wrapperLeft = $tableWrapper.offset().left;
+
+      // Устанавливаем ширину таблицы
+      $stickyTable.css({
+        width: tableWidth + "px",
+        "table-layout": "fixed",
+      });
+
+      // Копируем ширины и высоты всех ячеек
+      $thead.find("th").each(function (index) {
+        const $originalTh = $(this);
+        const $cloneTh = $theadClone.find("th").eq(index);
+
+        const width = $originalTh.outerWidth();
+        const height = $originalTh.outerHeight();
+
+        $cloneTh.css({
+          width: width + "px",
+          "min-width": width + "px",
+          "max-width": width + "px",
+          height: height + "px",
+          "box-sizing": "border-box",
+        });
+      });
+
+      // Создаем wrapper для sticky header
+      const $stickyWrapper = $('<div class="sticky-header-wrapper"></div>');
+      $stickyWrapper.css({
+        position: "fixed",
+        top: "70px",
+        "z-index": "1000",
+        "overflow-x": "auto",
+        "overflow-y": "hidden",
+        width: wrapperWidth + "px",
+        left: wrapperLeft + "px",
+        background: "#fff",
+      });
+
+      $stickyWrapper.append($stickyTable);
+      $("body").append($stickyWrapper);
+
+      // Синхронизация скролла
+      $tableWrapper.off("scroll.stickyHeader").on("scroll.stickyHeader", function () {
+        $stickyWrapper.scrollLeft($(this).scrollLeft());
+      });
+
+      // Синхронизация скролла в обратную сторону
+      $stickyWrapper.off("scroll.stickySync").on("scroll.stickySync", function () {
+        $tableWrapper.scrollLeft($(this).scrollLeft());
+      });
+    }
+  } else {
+    // Удаляем sticky header
+    if ($(".sticky-header-clone").length > 0) {
+      $(".sticky-header-wrapper").remove();
+      $tableWrapper.off("scroll.stickyHeader");
+    }
+  }
+});

@@ -7356,6 +7356,27 @@ table[data-app-toggle=table] {
   min-height: 100%;
 }
 
+thead.sticky-active {
+  background-color: #e2e7f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: table;
+  table-layout: fixed;
+}
+
+.sticky-header-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.sticky-header-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.sticky-header-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.sticky-header-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .table tbody td,
 .table tbody th {
   vertical-align: middle;
