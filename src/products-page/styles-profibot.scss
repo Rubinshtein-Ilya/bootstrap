@@ -283,15 +283,11 @@
   margin-left: 12px;
   margin-right: 12px;
   overflow-x: auto;
-  overflow-y: auto;
-  max-height: calc(100vh - 250px);
 
   @media (width < 576px) {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
-    max-height: none;
-    overflow-y: visible;
   }
 }
 
@@ -341,9 +337,6 @@
 .table thead th {
   vertical-align: middle;
   height: 100%;
-  position: sticky;
-  top: -1px;
-  z-index: 100;
   background-color: $light;
 
   > div {

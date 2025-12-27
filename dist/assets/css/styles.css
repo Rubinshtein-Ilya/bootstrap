@@ -7290,16 +7290,12 @@ table[data-app-toggle=table] {
   margin-left: 12px;
   margin-right: 12px;
   overflow-x: auto;
-  overflow-y: auto;
-  max-height: calc(100vh - 250px);
 }
 @media (width < 576px) {
   .table-wrapper {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
-    max-height: none;
-    overflow-y: visible;
   }
 }
 
@@ -7353,9 +7349,6 @@ table[data-app-toggle=table] {
 .table thead th {
   vertical-align: middle;
   height: 100%;
-  position: sticky;
-  top: -1px;
-  z-index: 100;
   background-color: #e2e7f1;
 }
 .table thead th > div {
