@@ -7363,18 +7363,15 @@ thead.sticky-active {
   table-layout: fixed;
 }
 
+.sticky-header-wrapper {
+  overflow-x: hidden !important;
+}
 .sticky-header-wrapper::-webkit-scrollbar {
-  height: 8px;
+  display: none;
 }
-.sticky-header-wrapper::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-.sticky-header-wrapper::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-.sticky-header-wrapper::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.sticky-header-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .table tbody td,

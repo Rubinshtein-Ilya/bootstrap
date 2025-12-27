@@ -799,19 +799,90 @@ $(window).on("scroll", function () {
         width: wrapperWidth + "px",
         left: wrapperLeft + "px",
         background: "#fff",
+        "overflow-x": "hidden",
       });
 
       $stickyWrapper.append($stickyTable);
       $("body").append($stickyWrapper);
 
+      // Синхронизация чекбокса между оригиналом и клоном
+      const $originalCheckbox = $thead.find("#mainCheckbox");
+      const $cloneCheckbox = $theadClone.find("#mainCheckbox");
+
+      // Меняем ID у клонированного чекбокса чтобы не было конфликтов
+      $cloneCheckbox.attr("id", "mainCheckbox-clone");
+      $theadClone.find('label[for="mainCheckbox"]').attr("for", "mainCheckbox-clone");
+
+      // Клик на клоне выполняет ту же логику что и оригинальный обработчик
+      $cloneCheckbox.on("click", function (e) {
+        const isChecked = $(this).prop("checked");
+
+        // Обновляем оригинальный чекбокс
+        $originalCheckbox.prop("checked", isChecked);
+
+        // Выполняем ту же логику что и в оригинальном обработчике
+        // Выбираем все чекбоксы кроме form-switch
+        $(".form-check-input").not(".form-switch .form-check-input").prop("checked", isChecked);
+      });
+
+      // Синхронизация состояния обратно (если кликнули на оригинал)
+      $originalCheckbox.on("change", function () {
+        $cloneCheckbox.prop("checked", $(this).prop("checked"));
+      });
+      // Восстанавливаем функционал resize для клонированного header
+      $theadClone.find(".resizer").each(function (index) {
+        const $resizer = $(this);
+        const $th = $resizer.closest("th");
+        const $originalTh = $thead.find("th").eq(index);
+        const columnName = $th.attr("data-column");
+
+        $resizer.on("mousedown", function (e) {
+          e.preventDefault();
+
+          const startX = e.pageX;
+          const startWidth = $th.outerWidth();
+          const startOriginalWidth = $originalTh.outerWidth();
+
+          $(document).on("mousemove.resize", function (e) {
+            const diff = e.pageX - startX;
+            const newWidth = startWidth + diff;
+            const newOriginalWidth = startOriginalWidth + diff;
+
+            if (newWidth > 50) {
+              // Обновляем ширину в клоне
+              $th.css({
+                width: newWidth + "px",
+                "min-width": newWidth + "px",
+                "max-width": newWidth + "px",
+              });
+
+              // Обновляем ширину в оригинальном header
+              $originalTh.css({
+                width: newOriginalWidth + "px",
+                "min-width": newOriginalWidth + "px",
+                "max-width": newOriginalWidth + "px",
+              });
+
+              // Обновляем ширину всех ячеек с таким же data-column (как в оригинальном коде)
+              if (columnName) {
+                $(`td[data-column="${columnName}"]`).css({
+                  width: newOriginalWidth + "px",
+                  "min-width": newOriginalWidth + "px",
+                  "max-width": newOriginalWidth + "px",
+                });
+              }
+            }
+          });
+
+          $(document).on("mouseup.resize", function () {
+            $(document).off("mousemove.resize mouseup.resize");
+          });
+        });
+      });
+
       // Синхронизация скролла
       $tableWrapper.off("scroll.stickyHeader").on("scroll.stickyHeader", function () {
         $stickyWrapper.scrollLeft($(this).scrollLeft());
-      });
-
-      // Синхронизация скролла в обратную сторону
-      $stickyWrapper.off("scroll.stickySync").on("scroll.stickySync", function () {
-        $tableWrapper.scrollLeft($(this).scrollLeft());
       });
     }
   } else {
