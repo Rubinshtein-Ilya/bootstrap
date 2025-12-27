@@ -660,6 +660,10 @@ $(document).ready(function () {
     // Переинициализируем обработчики для новых элементов
     $(".auto-resize").each(autoResizeTextarea);
     updateButtonsState();
+
+    // Сбрасываем главный чекбокс и клонированный после сортировки
+    $("#mainCheckbox").prop("checked", false);
+    $("#mainCheckbox-clone").prop("checked", false);
   }
 
   // stiky
