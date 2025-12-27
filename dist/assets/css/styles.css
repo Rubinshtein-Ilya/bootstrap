@@ -7373,6 +7373,11 @@ thead.sticky-active {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.sticky-header-wrapper .form-check {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 
 .table tbody td,
 .table tbody th {

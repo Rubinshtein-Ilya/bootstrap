@@ -743,6 +743,17 @@ $(window).on("scroll", function () {
 
   if ($table.length === 0) return;
 
+  // Не создаем sticky header на мобильных устройствах (< 576px)
+  const windowWidth = $(window).width();
+  if (windowWidth < 576) {
+    // Удаляем sticky header если он был создан
+    if ($(".sticky-header-clone").length > 0) {
+      $(".sticky-header-wrapper").remove();
+      $tableWrapper.off("scroll.stickyHeader");
+    }
+    return;
+  }
+
   const tableOffset = $table.offset().top;
   const scrollTop = $(window).scrollTop();
   const stickyPoint = 70; // Расстояние от верха экрана
@@ -804,6 +815,9 @@ $(window).on("scroll", function () {
       $stickyWrapper.append($stickyTable);
       $("body").append($stickyWrapper);
 
+      // Синхронизируем начальную позицию скролла
+      const currentScrollLeft = $tableWrapper.scrollLeft();
+      $stickyWrapper.scrollLeft(currentScrollLeft);
       // Синхронизация чекбокса между оригиналом и клоном
       const $originalCheckbox = $thead.find("#mainCheckbox");
       const $cloneCheckbox = $theadClone.find("#mainCheckbox");
@@ -937,6 +951,18 @@ $(window).on("scroll", function () {
     // Удаляем sticky header
     if ($(".sticky-header-clone").length > 0) {
       $(".sticky-header-wrapper").remove();
+      $tableWrapper.off("scroll.stickyHeader");
+    }
+  }
+});
+
+// Удаляем sticky header при изменении размера окна до мобильного
+$(window).on("resize", function () {
+  const windowWidth = $(window).width();
+  if (windowWidth < 576) {
+    if ($(".sticky-header-clone").length > 0) {
+      $(".sticky-header-wrapper").remove();
+      const $tableWrapper = $(".table-wrapper");
       $tableWrapper.off("scroll.stickyHeader");
     }
   }
