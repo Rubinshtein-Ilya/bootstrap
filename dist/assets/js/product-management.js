@@ -844,6 +844,9 @@ $(window).on("scroll", function () {
           const startWidth = $th.outerWidth();
           const startOriginalWidth = $originalTh.outerWidth();
 
+          let lastUpdate = 0;
+          const throttleDelay = 50; // мс
+
           $(document).on("mousemove.resize", function (e) {
             const diff = e.pageX - startX;
             const newWidth = startWidth + diff;
@@ -872,9 +875,33 @@ $(window).on("scroll", function () {
                   "max-width": newOriginalWidth + "px",
                 });
               }
+
+              // Throttled синхронизация всей таблицы и всех колонок
+              const now = Date.now();
+              if (now - lastUpdate > throttleDelay) {
+                lastUpdate = now;
+
+                // Обновляем ширину sticky таблицы
+                const currentTableWidth = $table.outerWidth();
+                $stickyTable.css("width", currentTableWidth + "px");
+
+                // Синхронизируем все остальные колонки
+                $thead.find("th").each(function () {
+                  const $origTh = $(this);
+                  const colName = $origTh.attr("data-column");
+                  if (colName && colName !== columnName) {
+                    const $cloneTh = $theadClone.find(`th[data-column="${colName}"]`);
+                    const actualWidth = $origTh.outerWidth();
+                    $cloneTh.css({
+                      width: actualWidth + "px",
+                      "min-width": actualWidth + "px",
+                      "max-width": actualWidth + "px",
+                    });
+                  }
+                });
+              }
             }
           });
-
           $(document).on("mouseup.resize", function () {
             $(document).off("mousemove.resize mouseup.resize");
 
