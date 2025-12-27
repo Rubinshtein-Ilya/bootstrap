@@ -765,12 +765,11 @@ $(window).on("scroll", function () {
       const wrapperWidth = $tableWrapper.outerWidth();
       const wrapperLeft = $tableWrapper.offset().left;
 
-      // Устанавливаем ширину таблицы
+      // Устанавливаем ширину sticky таблицы
       $stickyTable.css({
         width: tableWidth + "px",
         "table-layout": "fixed",
       });
-
       // Копируем ширины и высоты всех ячеек
       $thead.find("th").each(function (index) {
         const $originalTh = $(this);
@@ -830,11 +829,13 @@ $(window).on("scroll", function () {
         $cloneCheckbox.prop("checked", $(this).prop("checked"));
       });
       // Восстанавливаем функционал resize для клонированного header
-      $theadClone.find(".resizer").each(function (index) {
+      $theadClone.find(".resizer").each(function () {
         const $resizer = $(this);
         const $th = $resizer.closest("th");
-        const $originalTh = $thead.find("th").eq(index);
         const columnName = $th.attr("data-column");
+
+        // Находим соответствующий th в оригинале по data-column, а не по индексу
+        const $originalTh = $thead.find(`th[data-column="${columnName}"]`);
 
         $resizer.on("mousedown", function (e) {
           e.preventDefault();
@@ -863,7 +864,7 @@ $(window).on("scroll", function () {
                 "max-width": newOriginalWidth + "px",
               });
 
-              // Обновляем ширину всех ячеек с таким же data-column (как в оригинальном коде)
+              // Обновляем ширину всех ячеек с таким же data-column
               if (columnName) {
                 $(`td[data-column="${columnName}"]`).css({
                   width: newOriginalWidth + "px",
@@ -876,10 +877,30 @@ $(window).on("scroll", function () {
 
           $(document).on("mouseup.resize", function () {
             $(document).off("mousemove.resize mouseup.resize");
+
+            // Обновляем ширину sticky таблицы чтобы она соответствовала основной
+            const newTableWidth = $table.outerWidth();
+            $stickyTable.css("width", newTableWidth + "px");
+
+            // После окончания resize синхронизируем ВСЕ колонки
+            // потому что основная таблица (table-layout: auto) могла перераспределить ширину
+            $thead.find("th").each(function () {
+              const $originalTh = $(this);
+              const colName = $originalTh.attr("data-column");
+              if (colName) {
+                const $cloneTh = $theadClone.find(`th[data-column="${colName}"]`);
+                const actualWidth = $originalTh.outerWidth();
+
+                $cloneTh.css({
+                  width: actualWidth + "px",
+                  "min-width": actualWidth + "px",
+                  "max-width": actualWidth + "px",
+                });
+              }
+            });
           });
         });
       });
-
       // Синхронизация скролла
       $tableWrapper.off("scroll.stickyHeader").on("scroll.stickyHeader", function () {
         $stickyWrapper.scrollLeft($(this).scrollLeft());
