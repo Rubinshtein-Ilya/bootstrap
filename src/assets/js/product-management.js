@@ -662,6 +662,17 @@ $(document).ready(function () {
     updateButtonsState();
   }
 
+  // stiky
+
+  const renderStiky = (sortedProducts) => {
+    const tbody = $("#stiky-tbody");
+    sortedProducts.forEach((product) => {
+      tbody.append(createDesktopProduct(product));
+    });
+  };
+
+  renderStiky(products);
+
   // Функция для обновления иконки сортировки
   function updateSortIcon($icon, state) {
     if (state === "desc") {
